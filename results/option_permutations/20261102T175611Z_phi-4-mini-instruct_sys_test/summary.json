@@ -1,0 +1,323 @@
+{
+  "meta": {
+    "experiment": "option_permutations",
+    "model_key": "phi-4-mini-instruct",
+    "model": "microsoft/Phi-4-mini-instruct",
+    "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+    "dtype": "float16",
+    "device": "cuda",
+    "prompt_version": "v1+sys",
+    "prompt_format": "chat",
+    "system": "You answer multiple-choice questions. Reply with exactly one letter (A, B or C) and nothing else. Do not explain or show any working.",
+    "system_in_user_turn": false,
+    "template_kwargs": null,
+    "letter_tokens": {
+      "A": [
+        "A",
+        32
+      ],
+      "B": [
+        "B",
+        33
+      ],
+      "C": [
+        "C",
+        34
+      ]
+    },
+    "orders": [
+      "ABC",
+      "ACB",
+      "BAC",
+      "BCA",
+      "CAB",
+      "CBA"
+    ],
+    "split": "test",
+    "n_items": 792,
+    "limit": null,
+    "batch_size": 8,
+    "seed": 0,
+    "torch": "2.11.0+cu130",
+    "transformers": "5.21.0",
+    "python": "3.13.16",
+    "gpu": "Tesla T4",
+    "utc": "2026-11-02T17:56:11+00:00"
+  },
+  "report": {
+    "all": {
+      "n": 792,
+      "acc_original_order": 0.4545,
+      "acc_mean_over_orders": 0.4478,
+      "robust_correct": 0.1212,
+      "content_consistent": 0.1932,
+      "letter_consistent": 0.0808
+    },
+    "ode_type=first_order_direct": {
+      "n": 132,
+      "acc_original_order": 0.4773,
+      "acc_mean_over_orders": 0.452,
+      "robust_correct": 0.25,
+      "content_consistent": 0.4621,
+      "letter_consistent": 0.0227
+    },
+    "ode_type=first_order_linear": {
+      "n": 132,
+      "acc_original_order": 0.4773,
+      "acc_mean_over_orders": 0.4495,
+      "robust_correct": 0.0758,
+      "content_consistent": 0.0909,
+      "letter_consistent": 0.1061
+    },
+    "ode_type=first_order_separable": {
+      "n": 132,
+      "acc_original_order": 0.5606,
+      "acc_mean_over_orders": 0.5619,
+      "robust_correct": 0.2348,
+      "content_consistent": 0.3106,
+      "letter_consistent": 0.0455
+    },
+    "ode_type=second_order_direct": {
+      "n": 132,
+      "acc_original_order": 0.3485,
+      "acc_mean_over_orders": 0.3636,
+      "robust_correct": 0.0152,
+      "content_consistent": 0.0682,
+      "letter_consistent": 0.1136
+    },
+    "ode_type=second_order_homogeneous": {
+      "n": 132,
+      "acc_original_order": 0.4167,
+      "acc_mean_over_orders": 0.4268,
+      "robust_correct": 0.0909,
+      "content_consistent": 0.1364,
+      "letter_consistent": 0.0758
+    },
+    "ode_type=second_order_nonhomogeneous": {
+      "n": 132,
+      "acc_original_order": 0.447,
+      "acc_mean_over_orders": 0.4331,
+      "robust_correct": 0.0606,
+      "content_consistent": 0.0909,
+      "letter_consistent": 0.1212
+    },
+    "order=1": {
+      "n": 396,
+      "acc_original_order": 0.5051,
+      "acc_mean_over_orders": 0.4878,
+      "robust_correct": 0.1869,
+      "content_consistent": 0.2879,
+      "letter_consistent": 0.0581
+    },
+    "order=2": {
+      "n": 396,
+      "acc_original_order": 0.404,
+      "acc_mean_over_orders": 0.4078,
+      "robust_correct": 0.0556,
+      "content_consistent": 0.0985,
+      "letter_consistent": 0.1035
+    },
+    "subtype=B:duplicate": {
+      "n": 133,
+      "acc_original_order": 0.4511,
+      "acc_mean_over_orders": 0.4837,
+      "robust_correct": 0.1955,
+      "content_consistent": 0.2932,
+      "letter_consistent": 0.0902
+    },
+    "subtype=B:rescaled": {
+      "n": 131,
+      "acc_original_order": 0.542,
+      "acc_mean_over_orders": 0.5115,
+      "robust_correct": 0.1832,
+      "content_consistent": 0.2672,
+      "letter_consistent": 0.0382
+    },
+    "subtype=B:unrelated": {
+      "n": 132,
+      "acc_original_order": 0.447,
+      "acc_mean_over_orders": 0.4482,
+      "robust_correct": 0.0909,
+      "content_consistent": 0.1439,
+      "letter_consistent": 0.053
+    },
+    "subtype=C:extra1_direct": {
+      "n": 100,
+      "acc_original_order": 0.34,
+      "acc_mean_over_orders": 0.3533,
+      "robust_correct": 0.04,
+      "content_consistent": 0.15,
+      "letter_consistent": 0.24
+    },
+    "subtype=C:extra1_indirect": {
+      "n": 100,
+      "acc_original_order": 0.48,
+      "acc_mean_over_orders": 0.45,
+      "robust_correct": 0.14,
+      "content_consistent": 0.23,
+      "letter_consistent": 0.06
+    },
+    "subtype=C:extra2_direct": {
+      "n": 99,
+      "acc_original_order": 0.4242,
+      "acc_mean_over_orders": 0.4343,
+      "robust_correct": 0.101,
+      "content_consistent": 0.1212,
+      "letter_consistent": 0.0606
+    },
+    "subtype=C:extra2_indirect": {
+      "n": 97,
+      "acc_original_order": 0.4742,
+      "acc_mean_over_orders": 0.421,
+      "robust_correct": 0.0619,
+      "content_consistent": 0.1031,
+      "letter_consistent": 0.0412
+    },
+    "variant=B": {
+      "n": 396,
+      "acc_original_order": 0.4798,
+      "acc_mean_over_orders": 0.4811,
+      "robust_correct": 0.1566,
+      "content_consistent": 0.2348,
+      "letter_consistent": 0.0606
+    },
+    "variant=C": {
+      "n": 396,
+      "acc_original_order": 0.4293,
+      "acc_mean_over_orders": 0.4146,
+      "robust_correct": 0.0859,
+      "content_consistent": 0.1515,
+      "letter_consistent": 0.101
+    }
+  },
+  "n_correct_histogram": {
+    "0": 130,
+    "1": 102,
+    "2": 166,
+    "3": 133,
+    "4": 106,
+    "5": 59,
+    "6": 96
+  },
+  "n_correct_histogram_if_guessing": {
+    "0": 69.5,
+    "1": 208.6,
+    "2": 260.7,
+    "3": 173.8,
+    "4": 65.2,
+    "5": 13.0,
+    "6": 1.1
+  },
+  "pred_letter_counts_all_orders": {
+    "A": 1195,
+    "B": 1586,
+    "C": 1971
+  },
+  "acc_by_order": {
+    "ABC": 0.4545,
+    "ACB": 0.4432,
+    "BAC": 0.4495,
+    "BCA": 0.4747,
+    "CAB": 0.4255,
+    "CBA": 0.4394
+  },
+  "trap_pick_rate_all_orders": 0.3321,
+  "robust_correct_ids": [
+    "ivp-0072",
+    "ivp-0079",
+    "ivp-0082",
+    "ivp-0083",
+    "ivp-0086",
+    "ivp-0088",
+    "ivp-0090",
+    "ivp-0091",
+    "ivp-0092",
+    "ivp-0099",
+    "ivp-0104",
+    "ivp-0109",
+    "ivp-0111",
+    "ivp-0112",
+    "ivp-0116",
+    "ivp-0122",
+    "ivp-0127",
+    "ivp-0131",
+    "ivp-0134",
+    "ivp-0135",
+    "ivp-0136",
+    "ivp-0137",
+    "ivp-0145",
+    "ivp-0146",
+    "ivp-0165",
+    "ivp-0188",
+    "ivp-0196",
+    "ivp-0198",
+    "ivp-0212",
+    "ivp-0213",
+    "ivp-0214",
+    "ivp-0215",
+    "ivp-0217",
+    "ivp-0218",
+    "ivp-0222",
+    "ivp-0223",
+    "ivp-0226",
+    "ivp-0230",
+    "ivp-0233",
+    "ivp-0234",
+    "ivp-0236",
+    "ivp-0240",
+    "ivp-0242",
+    "ivp-0248",
+    "ivp-0249",
+    "ivp-0251",
+    "ivp-0262",
+    "ivp-0265",
+    "ivp-0266",
+    "ivp-0268",
+    "ivp-0294",
+    "ivp-0362",
+    "ivp-0370",
+    "ivp-0371",
+    "ivp-0373",
+    "ivp-0374",
+    "ivp-0378",
+    "ivp-0416",
+    "ivp-0419",
+    "ivp-0424",
+    "ivp-0433",
+    "ivp-0443",
+    "ivp-0471",
+    "ivp-0475",
+    "ivp-0476",
+    "ivp-0477",
+    "ivp-0478",
+    "ivp-0479",
+    "ivp-0484",
+    "ivp-0487",
+    "ivp-0488",
+    "ivp-0489",
+    "ivp-0501",
+    "ivp-0546",
+    "ivp-0554",
+    "ivp-0560",
+    "ivp-0582",
+    "ivp-0605",
+    "ivp-0612",
+    "ivp-0621",
+    "ivp-0623",
+    "ivp-0639",
+    "ivp-0642",
+    "ivp-0652",
+    "ivp-0660",
+    "ivp-0661",
+    "ivp-0704",
+    "ivp-0741",
+    "ivp-0744",
+    "ivp-0756",
+    "ivp-0757",
+    "ivp-0759",
+    "ivp-0770",
+    "ivp-0802",
+    "ivp-0816",
+    "ivp-0839"
+  ]
+}

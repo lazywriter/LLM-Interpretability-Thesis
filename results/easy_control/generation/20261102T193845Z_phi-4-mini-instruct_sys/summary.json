@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "model": "microsoft/Phi-4-mini-instruct",
+    "system": "You answer multiple-choice questions. Reply with exactly one letter (A, B or C) and nothing else. Do not explain or show any working.",
+    "data": "easy_mcq/easy_mcq_test.jsonl",
+    "max_new_tokens": 64,
+    "greedy": true,
+    "transformers": "5.20.2"
+  },
+  "n": 144,
+  "letter_score_acc": 0.6180555555555556,
+  "written_acc": 0.6180555555555556,
+  "no_answer_found": 0,
+  "read_by_number": 0,
+  "written_equals_letter_score": 1.0,
+  "starts_with_letter": 1.0,
+  "per_category_written_acc": {
+    "add": 0.3333333333333333,
+    "div": 0.6666666666666666,
+    "mixed": 0.5,
+    "mul": 0.9166666666666666,
+    "pow": 0.9166666666666666,
+    "sub": 0.375
+  }
+}

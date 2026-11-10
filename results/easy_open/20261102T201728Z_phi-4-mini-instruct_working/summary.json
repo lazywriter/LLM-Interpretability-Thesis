@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "experiment": "open_arithmetic",
+    "model_key": "phi-4-mini-instruct",
+    "model": "microsoft/Phi-4-mini-instruct",
+    "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+    "mode": "working",
+    "system": null,
+    "template_kwargs": null,
+    "dtype": "float16",
+    "device": "cuda",
+    "greedy": true,
+    "max_new_tokens": 256,
+    "example_input": "<|user|>Compute the value of the expression below.\n\nExpression: 17 + 40\n\nShow your working briefly, then finish with a final line of the form \"Answer: <number>\".<|end|><|assistant|>",
+    "data": "easy_open/easy_open_test.jsonl",
+    "n_items": 144,
+    "limit": null,
+    "seed": 0,
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "python": "3.13.16",
+    "gpu": "Tesla T4",
+    "utc": "2026-11-02T20:17:28+00:00"
+  },
+  "accuracy": 1.0,
+  "per_category": {
+    "add": {
+      "acc": 1.0,
+      "n": 24
+    },
+    "div": {
+      "acc": 1.0,
+      "n": 24
+    },
+    "mixed": {
+      "acc": 1.0,
+      "n": 24
+    },
+    "mul": {
+      "acc": 1.0,
+      "n": 24
+    },
+    "pow": {
+      "acc": 1.0,
+      "n": 24
+    },
+    "sub": {
+      "acc": 1.0,
+      "n": 24
+    }
+  },
+  "no_number_found": 0,
+  "number_only_replies": 0,
+  "read_by": {
+    "answer_line": 144
+  },
+  "mean_new_tokens": 58.34027777777778,
+  "wrong_examples": []
+}

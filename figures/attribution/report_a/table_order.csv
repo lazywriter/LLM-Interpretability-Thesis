@@ -1,0 +1,5 @@
+case,Qwen3-4B,Qwen2.5-Math-1.5B,Phi-4-mini
+"Two useful conditions, no distractor: second ÷ first","1.35 [0.94, 1.72]  (n=16)","1.41 [0.92, 1.91]  (n=18)","1.15 [0.93, 1.80]  (n=18)"
+Distractor written FIRST: distractor ÷ useful,"1.25 [1.06, 1.33]  (n=24)","1.11 [1.03, 1.36]  (n=30)","0.99 [0.90, 1.07]  (n=30)"
+Distractor written AFTER a useful one: distractor ÷ useful,"0.52 [0.49, 0.66]  (n=35)","0.74 [0.64, 0.79]  (n=42)","0.75 [0.68, 0.81]  (n=41)"
+Same condition written twice: second copy ÷ first copy,"0.55 [0.50, 0.58]  (n=36)","0.62 [0.57, 0.64]  (n=35)","0.75 [0.69, 0.82]  (n=36)"

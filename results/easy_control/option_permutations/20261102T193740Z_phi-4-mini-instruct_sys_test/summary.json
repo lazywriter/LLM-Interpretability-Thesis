@@ -1,0 +1,259 @@
+{
+  "meta": {
+    "experiment": "option_permutations",
+    "model_key": "phi-4-mini-instruct",
+    "model": "microsoft/Phi-4-mini-instruct",
+    "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+    "dtype": "float16",
+    "device": "cuda",
+    "prompt_version": "v1+sys",
+    "prompt_format": "chat",
+    "system": "You answer multiple-choice questions. Reply with exactly one letter (A, B or C) and nothing else. Do not explain or show any working.",
+    "system_in_user_turn": false,
+    "template_kwargs": null,
+    "letter_tokens": {
+      "A": [
+        "A",
+        32
+      ],
+      "B": [
+        "B",
+        33
+      ],
+      "C": [
+        "C",
+        34
+      ]
+    },
+    "orders": [
+      "ABC",
+      "ACB",
+      "BAC",
+      "BCA",
+      "CAB",
+      "CBA"
+    ],
+    "split": "test",
+    "data": "easy_mcq/easy_mcq_test.jsonl",
+    "n_items": 144,
+    "limit": null,
+    "batch_size": 8,
+    "seed": 0,
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "python": "3.13.16",
+    "gpu": "Tesla T4",
+    "utc": "2026-11-02T19:37:40+00:00"
+  },
+  "report": {
+    "all": {
+      "n": 144,
+      "acc_original_order": 0.6181,
+      "acc_mean_over_orders": 0.6262,
+      "robust_correct": 0.3264,
+      "content_consistent": 0.3264,
+      "letter_consistent": 0.2986
+    },
+    "ode_type=add": {
+      "n": 24,
+      "acc_original_order": 0.3333,
+      "acc_mean_over_orders": 0.3403,
+      "robust_correct": 0.0,
+      "content_consistent": 0.0,
+      "letter_consistent": 0.9167
+    },
+    "ode_type=div": {
+      "n": 24,
+      "acc_original_order": 0.6667,
+      "acc_mean_over_orders": 0.7778,
+      "robust_correct": 0.5,
+      "content_consistent": 0.5,
+      "letter_consistent": 0.0417
+    },
+    "ode_type=mixed": {
+      "n": 24,
+      "acc_original_order": 0.5,
+      "acc_mean_over_orders": 0.4375,
+      "robust_correct": 0.0,
+      "content_consistent": 0.0,
+      "letter_consistent": 0.0
+    },
+    "ode_type=mul": {
+      "n": 24,
+      "acc_original_order": 0.9167,
+      "acc_mean_over_orders": 0.9444,
+      "robust_correct": 0.7917,
+      "content_consistent": 0.7917,
+      "letter_consistent": 0.0
+    },
+    "ode_type=pow": {
+      "n": 24,
+      "acc_original_order": 0.9167,
+      "acc_mean_over_orders": 0.8889,
+      "robust_correct": 0.6667,
+      "content_consistent": 0.6667,
+      "letter_consistent": 0.0
+    },
+    "ode_type=sub": {
+      "n": 24,
+      "acc_original_order": 0.375,
+      "acc_mean_over_orders": 0.3681,
+      "robust_correct": 0.0,
+      "content_consistent": 0.0,
+      "letter_consistent": 0.8333
+    },
+    "order=1": {
+      "n": 120,
+      "acc_original_order": 0.6417,
+      "acc_mean_over_orders": 0.6639,
+      "robust_correct": 0.3917,
+      "content_consistent": 0.3917,
+      "letter_consistent": 0.3583
+    },
+    "order=2": {
+      "n": 24,
+      "acc_original_order": 0.5,
+      "acc_mean_over_orders": 0.4375,
+      "robust_correct": 0.0,
+      "content_consistent": 0.0,
+      "letter_consistent": 0.0
+    },
+    "subtype=E:add": {
+      "n": 24,
+      "acc_original_order": 0.3333,
+      "acc_mean_over_orders": 0.3403,
+      "robust_correct": 0.0,
+      "content_consistent": 0.0,
+      "letter_consistent": 0.9167
+    },
+    "subtype=E:div": {
+      "n": 24,
+      "acc_original_order": 0.6667,
+      "acc_mean_over_orders": 0.7778,
+      "robust_correct": 0.5,
+      "content_consistent": 0.5,
+      "letter_consistent": 0.0417
+    },
+    "subtype=E:mixed": {
+      "n": 24,
+      "acc_original_order": 0.5,
+      "acc_mean_over_orders": 0.4375,
+      "robust_correct": 0.0,
+      "content_consistent": 0.0,
+      "letter_consistent": 0.0
+    },
+    "subtype=E:mul": {
+      "n": 24,
+      "acc_original_order": 0.9167,
+      "acc_mean_over_orders": 0.9444,
+      "robust_correct": 0.7917,
+      "content_consistent": 0.7917,
+      "letter_consistent": 0.0
+    },
+    "subtype=E:pow": {
+      "n": 24,
+      "acc_original_order": 0.9167,
+      "acc_mean_over_orders": 0.8889,
+      "robust_correct": 0.6667,
+      "content_consistent": 0.6667,
+      "letter_consistent": 0.0
+    },
+    "subtype=E:sub": {
+      "n": 24,
+      "acc_original_order": 0.375,
+      "acc_mean_over_orders": 0.3681,
+      "robust_correct": 0.0,
+      "content_consistent": 0.0,
+      "letter_consistent": 0.8333
+    },
+    "variant=E": {
+      "n": 144,
+      "acc_original_order": 0.6181,
+      "acc_mean_over_orders": 0.6262,
+      "robust_correct": 0.3264,
+      "content_consistent": 0.3264,
+      "letter_consistent": 0.2986
+    }
+  },
+  "n_correct_histogram": {
+    "0": 4,
+    "1": 3,
+    "2": 54,
+    "3": 9,
+    "4": 14,
+    "5": 13,
+    "6": 47
+  },
+  "n_correct_histogram_if_guessing": {
+    "0": 12.6,
+    "1": 37.9,
+    "2": 47.4,
+    "3": 31.6,
+    "4": 11.9,
+    "5": 2.4,
+    "6": 0.2
+  },
+  "pred_letter_counts_all_orders": {
+    "A": 510,
+    "B": 221,
+    "C": 133
+  },
+  "acc_by_order": {
+    "ABC": 0.6181,
+    "ACB": 0.625,
+    "BAC": 0.6111,
+    "BCA": 0.6319,
+    "CAB": 0.6389,
+    "CBA": 0.6319
+  },
+  "trap_pick_rate_all_orders": null,
+  "robust_correct_ids": [
+    "easy-0048",
+    "easy-0049",
+    "easy-0050",
+    "easy-0051",
+    "easy-0052",
+    "easy-0053",
+    "easy-0054",
+    "easy-0056",
+    "easy-0058",
+    "easy-0059",
+    "easy-0061",
+    "easy-0062",
+    "easy-0063",
+    "easy-0064",
+    "easy-0065",
+    "easy-0068",
+    "easy-0069",
+    "easy-0070",
+    "easy-0071",
+    "easy-0072",
+    "easy-0075",
+    "easy-0076",
+    "easy-0078",
+    "easy-0080",
+    "easy-0082",
+    "easy-0085",
+    "easy-0086",
+    "easy-0087",
+    "easy-0089",
+    "easy-0091",
+    "easy-0094",
+    "easy-0096",
+    "easy-0100",
+    "easy-0101",
+    "easy-0103",
+    "easy-0105",
+    "easy-0106",
+    "easy-0108",
+    "easy-0109",
+    "easy-0110",
+    "easy-0111",
+    "easy-0112",
+    "easy-0114",
+    "easy-0116",
+    "easy-0117",
+    "easy-0118",
+    "easy-0119"
+  ]
+}

@@ -1,0 +1,11 @@
+model,field,correct (median),wrong (median),wrong ÷ correct [95% CI],n
+Qwen2.5-Math-1.5B,instruction,0.39,0.38,"0.98 [0.91, 1.13]",126 correct / 17 wrong
+Qwen2.5-Math-1.5B,equation,0.91,0.86,"0.94 [0.78, 1.14]",126 correct / 17 wrong
+Qwen2.5-Math-1.5B,useful condition(s),0.95,1.02,"1.07 [0.80, 1.16]",126 correct / 17 wrong
+Qwen2.5-Math-1.5B,distractor condition,0.80,0.80,"0.99 [0.81, 1.42]",94 correct / 13 wrong
+Qwen2.5-Math-1.5B,answer-format instruction,1.31,1.32,"1.01 [0.94, 1.08]",126 correct / 17 wrong
+Phi-4-mini,instruction,2.54,3.49,"1.37 [1.20, 1.47]",104 correct / 39 wrong
+Phi-4-mini,equation,0.63,0.40,"0.63 [0.53, 0.78]",104 correct / 39 wrong
+Phi-4-mini,useful condition(s),0.63,0.48,"0.76 [0.68, 0.89]",104 correct / 39 wrong
+Phi-4-mini,distractor condition,0.50,0.41,"0.81 [0.73, 0.95]",80 correct / 27 wrong
+Phi-4-mini,answer-format instruction,1.07,1.12,"1.04 [0.99, 1.10]",104 correct / 39 wrong

@@ -1,0 +1,4 @@
+model,"spread of distractor ratio, G×I (IQR, log2)","same, attention",rank corr. G×I vs attention,answers with p > 0.99,"G×I kept after cancellation, |Σ| ÷ Σ|·|"
+Qwen3-4B,3.08,1.10,0.25,76%,0.35
+Qwen2.5-Math-1.5B,2.00,0.76,0.21,50%,0.32
+Phi-4-mini,2.38,0.63,-0.08,32%,0.32

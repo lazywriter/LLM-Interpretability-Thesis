@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "experiment": "open_arithmetic",
+    "model_key": "phi-4-mini-instruct",
+    "model": "microsoft/Phi-4-mini-instruct",
+    "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+    "mode": "number",
+    "system": null,
+    "template_kwargs": null,
+    "dtype": "float16",
+    "device": "cuda",
+    "greedy": true,
+    "max_new_tokens": 16,
+    "example_input": "<|user|>Compute the value of the expression below.\n\nExpression: 17 + 40\n\nAnswer with the number only.<|end|><|assistant|>",
+    "data": "easy_open/easy_open_test.jsonl",
+    "n_items": 144,
+    "limit": null,
+    "seed": 0,
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "python": "3.13.16",
+    "gpu": "Tesla T4",
+    "utc": "2026-11-02T20:10:12+00:00"
+  },
+  "accuracy": 0.7986111111111112,
+  "per_category": {
+    "add": {
+      "acc": 0.8333333333333334,
+      "n": 24
+    },
+    "div": {
+      "acc": 0.9583333333333334,
+      "n": 24
+    },
+    "mixed": {
+      "acc": 0.20833333333333334,
+      "n": 24
+    },
+    "mul": {
+      "acc": 1.0,
+      "n": 24
+    },
+    "pow": {
+      "acc": 0.9166666666666666,
+      "n": 24
+    },
+    "sub": {
+      "acc": 0.875,
+      "n": 24
+    }
+  },
+  "no_number_found": 0,
+  "number_only_replies": 138,
+  "read_by": {
+    "first_number": 143,
+    "after_equals": 1
+  },
+  "mean_new_tokens": 2.5972222222222223,
+  "wrong_examples": [
+    {
+      "expression": "21 + 29",
+      "value": 50,
+      "read": 49,
+      "reply": "49"
+    },
+    {
+      "expression": "9 + 38",
+      "value": 47,
+      "read": 37,
+      "reply": "37"
+    },
+    {
+      "expression": "8 + 39",
+      "value": 47,
+      "read": 43,
+      "reply": "43"
+    },
+    {
+      "expression": "59 + 11",
+      "value": 70,
+      "read": 69,
+      "reply": "69"
+    },
+    {
+      "expression": "58 - 14",
+      "value": 44,
+      "read": 42,
+      "reply": "42"
+    },
+    {
+      "expression": "47 - 26",
+      "value": 21,
+      "read": 19,
+      "reply": "19"
+    },
+    {
+      "expression": "55 - 19",
+      "value": 36,
+      "read": 26,
+      "reply": "26"
+    },
+    {
+      "expression": "110 / 10",
+      "value": 11,
+      "read": 10,
+      "reply": "10"
+    },
+    {
+      "expression": "6 ** 3",
+      "value": 216,
+      "read": 18,
+      "reply": "18"
+    },
+    {
+      "expression": "8 ** 2",
+      "value": 64,
+      "read": 16,
+      "reply": "16"
+    },
+    {
+      "expression": "16 + 6 * 7",
+      "value": 58,
+      "read": 16,
+      "reply": "The value of the expression 16 + 6 * 7 is 62"
+    },
+    {
+      "expression": "2 + 5 * 9",
+      "value": 47,
+      "read": 17,
+      "reply": "17"
+    },
+    {
+      "expression": "4 + 6 * 5",
+      "value": 34,
+      "read": 26,
+      "reply": "26"
+    },
+    {
+      "expression": "13 + 8 * 5",
+      "value": 53,
+      "read": 41,
+      "reply": "41"
+    },
+    {
+      "expression": "8 + 9 * 5",
+      "value": 53,
+      "read": 43,
+      "reply": "43"
+    }
+  ]
+}

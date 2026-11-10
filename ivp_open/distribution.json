@@ -1,0 +1,35 @@
+{
+  "split": {
+    "test": 792,
+    "dev": 72
+  },
+  "subtype": {
+    "none": 216,
+    "duplicate": 216,
+    "rescaled": 216,
+    "unrelated": 216
+  },
+  "ode_type": {
+    "first_order_direct": 144,
+    "first_order_separable": 144,
+    "first_order_linear": 144,
+    "second_order_direct": 144,
+    "second_order_homogeneous": 144,
+    "second_order_nonhomogeneous": 144
+  },
+  "order": {
+    "1": 432,
+    "2": 432
+  },
+  "n_conditions": {
+    "1": 108,
+    "2": 432,
+    "3": 324
+  },
+  "distractor_position": {
+    "None": 216,
+    "1": 270,
+    "2": 270,
+    "3": 108
+  }
+}

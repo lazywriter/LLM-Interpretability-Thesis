@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "system": null,
+    "data": "easy_mcq/easy_mcq_test.jsonl",
+    "max_new_tokens": 64,
+    "greedy": true,
+    "transformers": "5.20.2"
+  },
+  "n": 144,
+  "letter_score_acc": 0.7013888888888888,
+  "written_acc": 0.6944444444444444,
+  "no_answer_found": 0,
+  "read_by_number": 0,
+  "written_equals_letter_score": 0.9930555555555556,
+  "starts_with_letter": 1.0,
+  "per_category_written_acc": {
+    "add": 0.3333333333333333,
+    "div": 0.9166666666666666,
+    "mixed": 0.4583333333333333,
+    "mul": 1.0,
+    "pow": 1.0,
+    "sub": 0.4583333333333333
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "experiment": "open_eval",
+    "model_key": "qwen2.5-math-1.5b-instruct",
+    "model": "Qwen/Qwen2.5-Math-1.5B-Instruct",
+    "revision": "aafeb0fc6f22cbf0eaeed126eff8be45b0360a35",
+    "prompt_version": "open-v1",
+    "prompt_format": "chat",
+    "raw_suffix": null,
+    "system": null,
+    "template_kwargs": null,
+    "thinking": false,
+    "example_input": "<|im_start|>system\nPlease reason step by step, and put your final answer within \\boxed{}.<|im_end|>\n<|im_start|>user\nSolve the initial value problem below.\n\nDifferential equation: y' = -4*exp(x)\nConditions:\n1. y(0) = -6\n\nShow your working, then finish with a final line of the form \"Answer: y = <expression>\", writing the expression in plain text (for example: y = 3*exp(2*x) - x^2).<|im_end|>\n<|im_start|>assistant\n",
+    "dtype": "float16",
+    "device": "cuda",
+    "greedy": true,
+    "max_new_tokens": 1536,
+    "batch_size": 16,
+    "data": "ivp_open/ivp_open_test.jsonl",
+    "split": "test",
+    "subtypes": null,
+    "n_items": 792,
+    "limit": null,
+    "resumed": false,
+    "seed": 0,
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "python": "3.13.16",
+    "gpu": "Tesla T4",
+    "seconds": 2680,
+    "utc": "2026-11-03T23:09:26+00:00"
+  },
+  "accuracy": 0.8624,
+  "report": {
+    "all": {
+      "acc": 0.8624,
+      "n": 792
+    },
+    "category=direct2_exp": {
+      "acc": 0.9318,
+      "n": 44
+    },
+    "category=direct2_power": {
+      "acc": 0.9091,
+      "n": 44
+    },
+    "category=direct2_trig": {
+      "acc": 0.9091,
+      "n": 44
+    },
+    "category=direct_exp": {
+      "acc": 1.0,
+      "n": 44
+    },
+    "category=direct_power": {
+      "acc": 1.0,
+      "n": 44
+    },
+    "category=direct_trig": {
+      "acc": 1.0,
+      "n": 44
+    },
+    "category=hom_complex": {
+      "acc": 0.75,
+      "n": 44
+    },
+    "category=hom_real_distinct": {
+      "acc": 0.8182,
+      "n": 44
+    },
+    "category=hom_repeated": {
+      "acc": 0.8409,
+      "n": 44
+    },
+    "category=linear_const_forcing": {
+      "acc": 0.9545,
+      "n": 44
+    },
+    "category=linear_exp_forcing": {
+      "acc": 0.8409,
+      "n": 44
+    },
+    "category=linear_poly_forcing": {
+      "acc": 0.9545,
+      "n": 44
+    },
+    "category=nonhom_complex": {
+      "acc": 0.7273,
+      "n": 44
+    },
+    "category=nonhom_real_distinct": {
+      "acc": 0.6591,
+      "n": 44
+    },
+    "category=nonhom_repeated": {
+      "acc": 0.7727,
+      "n": 44
+    },
+    "category=separable_exponential": {
+      "acc": 0.75,
+      "n": 44
+    },
+    "category=separable_xy": {
+      "acc": 0.8182,
+      "n": 44
+    },
+    "category=separable_y_over_x": {
+      "acc": 0.8864,
+      "n": 44
+    },
+    "ode_type=first_order_direct": {
+      "acc": 1.0,
+      "n": 132
+    },
+    "ode_type=first_order_linear": {
+      "acc": 0.9167,
+      "n": 132
+    },
+    "ode_type=first_order_separable": {
+      "acc": 0.8182,
+      "n": 132
+    },
+    "ode_type=second_order_direct": {
+      "acc": 0.9167,
+      "n": 132
+    },
+    "ode_type=second_order_homogeneous": {
+      "acc": 0.803,
+      "n": 132
+    },
+    "ode_type=second_order_nonhomogeneous": {
+      "acc": 0.7197,
+      "n": 132
+    },
+    "order=1": {
+      "acc": 0.9116,
+      "n": 396
+    },
+    "order=2": {
+      "acc": 0.8131,
+      "n": 396
+    },
+    "subtype=duplicate": {
+      "acc": 0.8434,
+      "n": 198
+    },
+    "subtype=none": {
+      "acc": 0.899,
+      "n": 198
+    },
+    "subtype=rescaled": {
+      "acc": 0.8838,
+      "n": 198
+    },
+    "subtype=unrelated": {
+      "acc": 0.8232,
+      "n": 198
+    },
+    "answer_status": {
+      "ok": 771,
+      "parse_error": 19,
+      "free_symbols": 2
+    },
+    "unrelated: answer satisfies z-condition read as y": 0.0556,
+    "unrelated: answer equals the trap solution": 0.0455
+  },
+  "truncated": 4,
+  "mean_new_tokens": 648.6931818181819,
+  "answer_found_by": {
+    "answer_line": 617,
+    "boxed": 172,
+    "last_y_line": 3
+  },
+  "wrong_but_solves_ode": 84,
+  "wrong_but_satisfies_some_condition": 43
+}

@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "experiment": "open_eval",
+    "model_key": "llama-3.2-3b-instruct",
+    "model": "meta-llama/Llama-3.2-3B-Instruct",
+    "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "prompt_version": "open-v1",
+    "prompt_format": "chat",
+    "raw_suffix": null,
+    "system": null,
+    "template_kwargs": {
+      "date_string": "26 Jul 2024"
+    },
+    "thinking": false,
+    "example_input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nSolve the initial value problem below.\n\nDifferential equation: y' = 2*exp(x)\nConditions:\n1. y(0) = -2\n\nShow your working, then finish with a final line of the form \"Answer: y = <expression>\", writing the expression in plain text (for example: y = 3*exp(2*x) - x^2).<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "dtype": "float16",
+    "device": "cuda",
+    "greedy": true,
+    "max_new_tokens": 768,
+    "batch_size": 8,
+    "data": "ivp_open/ivp_open_dev.jsonl",
+    "split": "dev",
+    "subtypes": null,
+    "n_items": 72,
+    "limit": null,
+    "seed": 0,
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "python": "3.13.16",
+    "gpu": "Tesla T4",
+    "seconds": 384,
+    "utc": "2026-11-03T09:13:14+00:00",
+    "regraded_from": "20261103T090650Z_llama-3.2-3b-instruct_dev",
+    "regraded_utc": "2026-11-03T09:34:29+00:00",
+    "accuracy_before_regrade": 0.3333
+  },
+  "accuracy": 0.3333,
+  "report": {
+    "all": {
+      "acc": 0.3333,
+      "n": 72
+    },
+    "category=direct2_exp": {
+      "acc": 0.25,
+      "n": 4
+    },
+    "category=direct2_power": {
+      "acc": 0.0,
+      "n": 4
+    },
+    "category=direct2_trig": {
+      "acc": 0.25,
+      "n": 4
+    },
+    "category=direct_exp": {
+      "acc": 0.25,
+      "n": 4
+    },
+    "category=direct_power": {
+      "acc": 1.0,
+      "n": 4
+    },
+    "category=direct_trig": {
+      "acc": 0.5,
+      "n": 4
+    },
+    "category=hom_complex": {
+      "acc": 0.5,
+      "n": 4
+    },
+    "category=hom_real_distinct": {
+      "acc": 0.5,
+      "n": 4
+    },
+    "category=hom_repeated": {
+      "acc": 0.25,
+      "n": 4
+    },
+    "category=linear_const_forcing": {
+      "acc": 0.5,
+      "n": 4
+    },
+    "category=linear_exp_forcing": {
+      "acc": 0.25,
+      "n": 4
+    },
+    "category=linear_poly_forcing": {
+      "acc": 0.0,
+      "n": 4
+    },
+    "category=nonhom_complex": {
+      "acc": 0.25,
+      "n": 4
+    },
+    "category=nonhom_real_distinct": {
+      "acc": 0.0,
+      "n": 4
+    },
+    "category=nonhom_repeated": {
+      "acc": 0.0,
+      "n": 4
+    },
+    "category=separable_exponential": {
+      "acc": 0.5,
+      "n": 4
+    },
+    "category=separable_xy": {
+      "acc": 0.75,
+      "n": 4
+    },
+    "category=separable_y_over_x": {
+      "acc": 0.25,
+      "n": 4
+    },
+    "ode_type=first_order_direct": {
+      "acc": 0.5833,
+      "n": 12
+    },
+    "ode_type=first_order_linear": {
+      "acc": 0.25,
+      "n": 12
+    },
+    "ode_type=first_order_separable": {
+      "acc": 0.5,
+      "n": 12
+    },
+    "ode_type=second_order_direct": {
+      "acc": 0.1667,
+      "n": 12
+    },
+    "ode_type=second_order_homogeneous": {
+      "acc": 0.4167,
+      "n": 12
+    },
+    "ode_type=second_order_nonhomogeneous": {
+      "acc": 0.0833,
+      "n": 12
+    },
+    "order=1": {
+      "acc": 0.4444,
+      "n": 36
+    },
+    "order=2": {
+      "acc": 0.2222,
+      "n": 36
+    },
+    "subtype=duplicate": {
+      "acc": 0.3333,
+      "n": 18
+    },
+    "subtype=none": {
+      "acc": 0.0556,
+      "n": 18
+    },
+    "subtype=rescaled": {
+      "acc": 0.5556,
+      "n": 18
+    },
+    "subtype=unrelated": {
+      "acc": 0.3889,
+      "n": 18
+    },
+    "answer_status": {
+      "ok": 58,
+      "free_symbols": 10,
+      "parse_error": 4
+    },
+    "unrelated: answer satisfies z-condition read as y": 0.0556,
+    "unrelated: answer equals the trap solution": 0.0556
+  },
+  "truncated": 18,
+  "mean_new_tokens": 491.72222222222223,
+  "answer_found_by": {
+    "answer_line": 55,
+    "last_y_line": 17
+  },
+  "wrong_but_solves_ode": 13,
+  "wrong_but_satisfies_some_condition": 14
+}

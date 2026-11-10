@@ -1,0 +1,5 @@
+subtype,distractor,Qwen3-4B,Qwen2.5-Math-1.5B,Phi-4-mini
+rescaled,written first,"1.27 [1.02, 1.42]  (n=17)","1.11 [1.03, 1.48]  (n=19)","1.00 [0.87, 1.10]  (n=19)"
+rescaled,written after a useful one,"0.50 [0.47, 0.79]  (n=17)","0.60 [0.46, 0.87]  (n=17)","0.65 [0.54, 0.78]  (n=16)"
+unrelated,written first,"1.14 [0.97, 1.33]  (n=7)","1.16 [0.82, 1.50]  (n=11)","0.97 [0.65, 1.10]  (n=11)"
+unrelated,written after a useful one,"0.54 [0.49, 0.71]  (n=18)","0.74 [0.70, 0.86]  (n=25)","0.79 [0.73, 1.10]  (n=25)"

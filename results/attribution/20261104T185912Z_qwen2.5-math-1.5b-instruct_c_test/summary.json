@@ -1,0 +1,3560 @@
+{
+  "meta": {
+    "experiment": "attribution",
+    "model_key": "qwen2.5-math-1.5b-instruct",
+    "model": "Qwen/Qwen2.5-Math-1.5B-Instruct",
+    "revision": "aafeb0fc6f22cbf0eaeed126eff8be45b0360a35",
+    "target": "c",
+    "gens": "20261103T222446Z_qwen2.5-math-1.5b-instruct_test_regraded20261104T081815Z",
+    "split": "test",
+    "per_cell": 2,
+    "limit": null,
+    "n_selected": 144,
+    "n_done": 144,
+    "skipped": {},
+    "ig_steps": 128,
+    "ig_rule": "midpoint",
+    "ig_batch": 16,
+    "ig_baselines": {
+      "ig_pad": "pad-token embedding",
+      "ig_mask": "all-zero embedding"
+    },
+    "ig_varied_groups": "all except answer_prefix, target, template",
+    "attention": "eager; mean over heads; target tokens as queries",
+    "rollout": "(A + I)/2, row-normalised",
+    "dtype": "float32",
+    "checkpointing": true,
+    "device": "cuda",
+    "gpu": "Tesla T4",
+    "seed": 0,
+    "prompt_version": "open-v1",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "python": "3.13.16",
+    "seconds": 14707,
+    "utc": "2026-11-04T23:04:19+00:00"
+  },
+  "n_examples": 144,
+  "ig_completeness": {
+    "ig_pad": {
+      "median_relative_gap": 0.04393433679319775,
+      "share_under_10pct": 0.7916666666666666
+    },
+    "ig_mask": {
+      "median_relative_gap": 1.2401407061452785,
+      "share_under_10pct": 0.006944444444444444
+    }
+  },
+  "report": {
+    "gxi | all": {
+      "share_instruction": {
+        "mean": 0.08836516836912886,
+        "sem": 0.005928554992782252,
+        "n": 144
+      },
+      "share_equation": {
+        "mean": 0.22629354941462848,
+        "sem": 0.01321468161390611,
+        "n": 144
+      },
+      "share_answer_instruction": {
+        "mean": 0.21352655066804596,
+        "sem": 0.011589799304385537,
+        "n": 144
+      },
+      "share_prompt_other": {
+        "mean": 0.12785027554959638,
+        "sem": 0.008024817987175316,
+        "n": 144
+      },
+      "density_instruction": {
+        "mean": 1.1160014462886905,
+        "sem": 0.075475406419846,
+        "n": 144
+      },
+      "density_equation": {
+        "mean": 2.457191545319064,
+        "sem": 0.14924059267023349,
+        "n": 144
+      },
+      "density_answer_instruction": {
+        "mean": 0.4714913613559328,
+        "sem": 0.025332519181511668,
+        "n": 144
+      },
+      "density_prompt_other": {
+        "mean": 1.0216641013774093,
+        "sem": 0.06411302864410635,
+        "n": 144
+      },
+      "share_conditions": {
+        "mean": 0.34396445599860026,
+        "sem": 0.014494428793422755,
+        "n": 144
+      },
+      "density_sufficient": {
+        "mean": 1.5686653960514023,
+        "sem": 0.09263319487907763,
+        "n": 144
+      },
+      "density_distractor": {
+        "mean": 1.2542161310246445,
+        "sem": 0.09526666671657591,
+        "n": 108
+      },
+      "distractor_over_sufficient": {
+        "mean": 2.1026029713641643,
+        "sem": 0.4131878089092382,
+        "n": 108
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.8386515537560314,
+        "sem": 0.2116371913839433,
+        "n": 36
+      }
+    },
+    "gxi | subtype=none": {
+      "share_instruction": {
+        "mean": 0.10715322850499011,
+        "sem": 0.013264293130279818,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.25601655336279383,
+        "sem": 0.02819955714077803,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.2224645347639712,
+        "sem": 0.025043488867692292,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.1474794877681783,
+        "sem": 0.015961772249414974,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 1.2251741225194857,
+        "sem": 0.15647312772957864,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 2.4966409227314603,
+        "sem": 0.3057587254137207,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.4509483651021392,
+        "sem": 0.05269600097012151,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 1.2557825405273844,
+        "sem": 0.12845755239576703,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.26688619560006654,
+        "sem": 0.028278152942041477,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 1.5960559831213046,
+        "sem": 0.18426728102587508,
+        "n": 36
+      }
+    },
+    "gxi | order=1": {
+      "share_instruction": {
+        "mean": 0.09106633772640765,
+        "sem": 0.008449842729547954,
+        "n": 72
+      },
+      "share_equation": {
+        "mean": 0.24694112837501692,
+        "sem": 0.020044642099479107,
+        "n": 72
+      },
+      "share_answer_instruction": {
+        "mean": 0.2273869648303889,
+        "sem": 0.018047526360677732,
+        "n": 72
+      },
+      "share_prompt_other": {
+        "mean": 0.1319007761999521,
+        "sem": 0.01171696937453159,
+        "n": 72
+      },
+      "density_instruction": {
+        "mean": 1.0543813937310407,
+        "sem": 0.10230317799708111,
+        "n": 72
+      },
+      "density_equation": {
+        "mean": 2.7526242749676637,
+        "sem": 0.22260920382798624,
+        "n": 72
+      },
+      "density_answer_instruction": {
+        "mean": 0.45758093458191024,
+        "sem": 0.03605345614400171,
+        "n": 72
+      },
+      "density_prompt_other": {
+        "mean": 1.0721771741658812,
+        "sem": 0.09728530849829405,
+        "n": 72
+      },
+      "share_conditions": {
+        "mean": 0.3027047928682345,
+        "sem": 0.021397053040227706,
+        "n": 72
+      },
+      "density_sufficient": {
+        "mean": 1.694046680663676,
+        "sem": 0.1614473003895453,
+        "n": 72
+      },
+      "density_distractor": {
+        "mean": 1.3020169889456341,
+        "sem": 0.13048152775054112,
+        "n": 54
+      },
+      "distractor_over_sufficient": {
+        "mean": 2.843760436617442,
+        "sem": 0.784327030150021,
+        "n": 54
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.6333836674198878,
+        "sem": 0.22499249892695705,
+        "n": 18
+      }
+    },
+    "gxi | correct": {
+      "share_instruction": {
+        "mean": 0.08674387480622928,
+        "sem": 0.006309042372505525,
+        "n": 126
+      },
+      "share_equation": {
+        "mean": 0.22439601335152032,
+        "sem": 0.013673086907683797,
+        "n": 126
+      },
+      "share_answer_instruction": {
+        "mean": 0.21421344144640223,
+        "sem": 0.012567440907599028,
+        "n": 126
+      },
+      "share_prompt_other": {
+        "mean": 0.12936131234131742,
+        "sem": 0.008903947535065342,
+        "n": 126
+      },
+      "density_instruction": {
+        "mean": 1.0887302484606705,
+        "sem": 0.08011711108963708,
+        "n": 126
+      },
+      "density_equation": {
+        "mean": 2.4208831925837972,
+        "sem": 0.1500782181123361,
+        "n": 126
+      },
+      "density_answer_instruction": {
+        "mean": 0.4686946265458893,
+        "sem": 0.027116489695722924,
+        "n": 126
+      },
+      "density_prompt_other": {
+        "mean": 1.025630921460588,
+        "sem": 0.07063642032244764,
+        "n": 126
+      },
+      "share_conditions": {
+        "mean": 0.34528535805453076,
+        "sem": 0.015248026400302825,
+        "n": 126
+      },
+      "density_sufficient": {
+        "mean": 1.6261151087821017,
+        "sem": 0.10223428429253538,
+        "n": 126
+      },
+      "density_distractor": {
+        "mean": 1.2838043367568257,
+        "sem": 0.10561710575707592,
+        "n": 94
+      },
+      "distractor_over_sufficient": {
+        "mean": 2.1839988952605416,
+        "sem": 0.4664910001829409,
+        "n": 94
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.9045306414297556,
+        "sem": 0.25228022329206995,
+        "n": 30
+      }
+    },
+    "ig_pad | all": {
+      "share_instruction": {
+        "mean": 0.14833540959428806,
+        "sem": 0.007461743261673871,
+        "n": 144
+      },
+      "share_equation": {
+        "mean": 0.2782294196829904,
+        "sem": 0.01358050217661075,
+        "n": 144
+      },
+      "share_answer_instruction": {
+        "mean": 0.20943331763099626,
+        "sem": 0.011307154683780393,
+        "n": 144
+      },
+      "share_prompt_other": {
+        "mean": 0.1301344417755601,
+        "sem": 0.007112542229603942,
+        "n": 144
+      },
+      "density_instruction": {
+        "mean": 1.9082071954180826,
+        "sem": 0.09990734506941328,
+        "n": 144
+      },
+      "density_equation": {
+        "mean": 2.905272865119976,
+        "sem": 0.14434896652822332,
+        "n": 144
+      },
+      "density_answer_instruction": {
+        "mean": 0.4559553021078329,
+        "sem": 0.023480383879265168,
+        "n": 144
+      },
+      "density_prompt_other": {
+        "mean": 1.080390670566023,
+        "sem": 0.06120555133373354,
+        "n": 144
+      },
+      "share_conditions": {
+        "mean": 0.23386741131616506,
+        "sem": 0.011385331017671666,
+        "n": 144
+      },
+      "density_sufficient": {
+        "mean": 1.092103209113206,
+        "sem": 0.07207751859888324,
+        "n": 144
+      },
+      "density_distractor": {
+        "mean": 0.8188407987775815,
+        "sem": 0.07729797848650843,
+        "n": 108
+      },
+      "distractor_over_sufficient": {
+        "mean": 2.448366538632488,
+        "sem": 0.6526033940391357,
+        "n": 108
+      },
+      "duplicate_second_over_first": {
+        "mean": 1.2033549906785739,
+        "sem": 0.5031061614641844,
+        "n": 36
+      }
+    },
+    "ig_pad | subtype=none": {
+      "share_instruction": {
+        "mean": 0.1362568280597786,
+        "sem": 0.013671904152447498,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.3044532976446136,
+        "sem": 0.02750850590970881,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.2069947005565632,
+        "sem": 0.02661003685505189,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.15599723168156887,
+        "sem": 0.015949406814614295,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 1.5712539563389982,
+        "sem": 0.15933214466350656,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 2.7330661771630873,
+        "sem": 0.2284522562772636,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.40910757394420677,
+        "sem": 0.050631568700956475,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 1.3799812934802786,
+        "sem": 0.14592542196677713,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.1962979420574758,
+        "sem": 0.02380541277619729,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 1.1593401338409586,
+        "sem": 0.1587568493305875,
+        "n": 36
+      }
+    },
+    "ig_pad | order=1": {
+      "share_instruction": {
+        "mean": 0.14592001193083246,
+        "sem": 0.010089390899794735,
+        "n": 72
+      },
+      "share_equation": {
+        "mean": 0.3076515379143245,
+        "sem": 0.02189292788474105,
+        "n": 72
+      },
+      "share_answer_instruction": {
+        "mean": 0.21403631841947102,
+        "sem": 0.01482335235831818,
+        "n": 72
+      },
+      "share_prompt_other": {
+        "mean": 0.12367038377470514,
+        "sem": 0.010640415056841736,
+        "n": 72
+      },
+      "density_instruction": {
+        "mean": 1.7054665633293196,
+        "sem": 0.12075178826202675,
+        "n": 72
+      },
+      "density_equation": {
+        "mean": 3.3296635958860192,
+        "sem": 0.22599159044374953,
+        "n": 72
+      },
+      "density_answer_instruction": {
+        "mean": 0.429615970718149,
+        "sem": 0.02849850187369387,
+        "n": 72
+      },
+      "density_prompt_other": {
+        "mean": 1.0455655077050585,
+        "sem": 0.09219807015474608,
+        "n": 72
+      },
+      "share_conditions": {
+        "mean": 0.20872174796066692,
+        "sem": 0.015321234896870563,
+        "n": 72
+      },
+      "density_sufficient": {
+        "mean": 1.192262447182452,
+        "sem": 0.12108260644577533,
+        "n": 72
+      },
+      "density_distractor": {
+        "mean": 0.8971754404809059,
+        "sem": 0.12133833635462353,
+        "n": 54
+      },
+      "distractor_over_sufficient": {
+        "mean": 2.991312720762886,
+        "sem": 1.123447178086519,
+        "n": 54
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.5089735496734182,
+        "sem": 0.13923596390639342,
+        "n": 18
+      }
+    },
+    "ig_pad | correct": {
+      "share_instruction": {
+        "mean": 0.14805555560850264,
+        "sem": 0.0082249405224787,
+        "n": 126
+      },
+      "share_equation": {
+        "mean": 0.286968796205155,
+        "sem": 0.014941932334401933,
+        "n": 126
+      },
+      "share_answer_instruction": {
+        "mean": 0.2112267311175004,
+        "sem": 0.012105065807669665,
+        "n": 126
+      },
+      "share_prompt_other": {
+        "mean": 0.1253868877974304,
+        "sem": 0.007501419626386608,
+        "n": 126
+      },
+      "density_instruction": {
+        "mean": 1.882628619433406,
+        "sem": 0.10876654935278283,
+        "n": 126
+      },
+      "density_equation": {
+        "mean": 3.0090891054194437,
+        "sem": 0.15940411557584375,
+        "n": 126
+      },
+      "density_answer_instruction": {
+        "mean": 0.4558065050851638,
+        "sem": 0.02475362322178314,
+        "n": 126
+      },
+      "density_prompt_other": {
+        "mean": 1.0441243728455276,
+        "sem": 0.06610661949464108,
+        "n": 126
+      },
+      "share_conditions": {
+        "mean": 0.22836202927141158,
+        "sem": 0.0121698761300325,
+        "n": 126
+      },
+      "density_sufficient": {
+        "mean": 1.077659407184621,
+        "sem": 0.07391587121211701,
+        "n": 126
+      },
+      "density_distractor": {
+        "mean": 0.8129312702608235,
+        "sem": 0.08281586888447709,
+        "n": 94
+      },
+      "distractor_over_sufficient": {
+        "mean": 2.5818669909218483,
+        "sem": 0.7469266096890325,
+        "n": 94
+      },
+      "duplicate_second_over_first": {
+        "mean": 1.286206135778346,
+        "sem": 0.6006996928370144,
+        "n": 30
+      }
+    },
+    "ig_mask | all": {
+      "share_instruction": {
+        "mean": 0.1527185417335293,
+        "sem": 0.009992475389046775,
+        "n": 144
+      },
+      "share_equation": {
+        "mean": 0.19794526229190032,
+        "sem": 0.012372427037448175,
+        "n": 144
+      },
+      "share_answer_instruction": {
+        "mean": 0.20038143460134888,
+        "sem": 0.010898357005657092,
+        "n": 144
+      },
+      "share_prompt_other": {
+        "mean": 0.13660113854120448,
+        "sem": 0.008453452679782,
+        "n": 144
+      },
+      "density_instruction": {
+        "mean": 1.9118307671940324,
+        "sem": 0.12069310134587818,
+        "n": 144
+      },
+      "density_equation": {
+        "mean": 2.0667140954439542,
+        "sem": 0.13137673962983565,
+        "n": 144
+      },
+      "density_answer_instruction": {
+        "mean": 0.433972554154124,
+        "sem": 0.022779556363676987,
+        "n": 144
+      },
+      "density_prompt_other": {
+        "mean": 1.107267528139786,
+        "sem": 0.06811447491210738,
+        "n": 144
+      },
+      "share_conditions": {
+        "mean": 0.31235362283201706,
+        "sem": 0.013348956486206204,
+        "n": 144
+      },
+      "density_sufficient": {
+        "mean": 1.4344299749370686,
+        "sem": 0.0802137094382847,
+        "n": 144
+      },
+      "density_distractor": {
+        "mean": 1.1900593386459275,
+        "sem": 0.10277776833486603,
+        "n": 108
+      },
+      "distractor_over_sufficient": {
+        "mean": 2.4446823744417263,
+        "sem": 0.6717692619297388,
+        "n": 108
+      },
+      "duplicate_second_over_first": {
+        "mean": 3.2681224820958352,
+        "sem": 1.8412822322978757,
+        "n": 36
+      }
+    },
+    "ig_mask | subtype=none": {
+      "share_instruction": {
+        "mean": 0.14971848344820687,
+        "sem": 0.021284327782791865,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.21047092749172103,
+        "sem": 0.02711483231663019,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.24681272367992438,
+        "sem": 0.02323029563961709,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.12617052013416308,
+        "sem": 0.014412740935486154,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 1.6722344979740733,
+        "sem": 0.22031461944570088,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 1.8651472431786082,
+        "sem": 0.2332682942198512,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.4827298142449521,
+        "sem": 0.043553144626912316,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 1.1306833591701277,
+        "sem": 0.13438766134052255,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.2668273452459846,
+        "sem": 0.027484530851069045,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 1.5444326128846,
+        "sem": 0.16916499663588502,
+        "n": 36
+      }
+    },
+    "ig_mask | order=1": {
+      "share_instruction": {
+        "mean": 0.16915722997918395,
+        "sem": 0.01635684970180463,
+        "n": 72
+      },
+      "share_equation": {
+        "mean": 0.1865148584510551,
+        "sem": 0.015714628094600943,
+        "n": 72
+      },
+      "share_answer_instruction": {
+        "mean": 0.22462345489184424,
+        "sem": 0.015735417401361838,
+        "n": 72
+      },
+      "share_prompt_other": {
+        "mean": 0.15816140124591638,
+        "sem": 0.011321906971167025,
+        "n": 72
+      },
+      "density_instruction": {
+        "mean": 1.953232216533649,
+        "sem": 0.18771136856378406,
+        "n": 72
+      },
+      "density_equation": {
+        "mean": 2.0817206595868005,
+        "sem": 0.16997998783437712,
+        "n": 72
+      },
+      "density_answer_instruction": {
+        "mean": 0.4474707836075923,
+        "sem": 0.030394592810518907,
+        "n": 72
+      },
+      "density_prompt_other": {
+        "mean": 1.305991153354531,
+        "sem": 0.09226004449431023,
+        "n": 72
+      },
+      "share_conditions": {
+        "mean": 0.2615430554320004,
+        "sem": 0.018447626592301404,
+        "n": 72
+      },
+      "density_sufficient": {
+        "mean": 1.6316748552700953,
+        "sem": 0.13879460387234083,
+        "n": 72
+      },
+      "density_distractor": {
+        "mean": 0.9750845176140872,
+        "sem": 0.12324976531610415,
+        "n": 54
+      },
+      "distractor_over_sufficient": {
+        "mean": 2.660846066774498,
+        "sem": 1.2406133497379461,
+        "n": 54
+      },
+      "duplicate_second_over_first": {
+        "mean": 5.92139178332616,
+        "sem": 3.6224072450271794,
+        "n": 18
+      }
+    },
+    "ig_mask | correct": {
+      "share_instruction": {
+        "mean": 0.1521246427241991,
+        "sem": 0.010757172816614435,
+        "n": 126
+      },
+      "share_equation": {
+        "mean": 0.19705452577894925,
+        "sem": 0.013722817336459836,
+        "n": 126
+      },
+      "share_answer_instruction": {
+        "mean": 0.2039007839736946,
+        "sem": 0.011751062242446032,
+        "n": 126
+      },
+      "share_prompt_other": {
+        "mean": 0.13917258399300453,
+        "sem": 0.009222006567587556,
+        "n": 126
+      },
+      "density_instruction": {
+        "mean": 1.8912246104988932,
+        "sem": 0.13028716375638938,
+        "n": 126
+      },
+      "density_equation": {
+        "mean": 2.047581338406068,
+        "sem": 0.14478394991126145,
+        "n": 126
+      },
+      "density_answer_instruction": {
+        "mean": 0.4391757488629265,
+        "sem": 0.024642332335477735,
+        "n": 126
+      },
+      "density_prompt_other": {
+        "mean": 1.1258713166702483,
+        "sem": 0.07467416766506942,
+        "n": 126
+      },
+      "share_conditions": {
+        "mean": 0.30774746353015253,
+        "sem": 0.014734891731834308,
+        "n": 126
+      },
+      "density_sufficient": {
+        "mean": 1.455692747749422,
+        "sem": 0.08909467615088985,
+        "n": 126
+      },
+      "density_distractor": {
+        "mean": 1.1683954969135046,
+        "sem": 0.11435501308274672,
+        "n": 94
+      },
+      "distractor_over_sufficient": {
+        "mean": 2.526950390099745,
+        "sem": 0.7683632581712566,
+        "n": 94
+      },
+      "duplicate_second_over_first": {
+        "mean": 3.7505075318566257,
+        "sem": 2.204606124571279,
+        "n": 30
+      }
+    },
+    "attn | all": {
+      "share_instruction": {
+        "mean": 0.03478831416158925,
+        "sem": 0.00034996059551689753,
+        "n": 144
+      },
+      "share_equation": {
+        "mean": 0.17085694456418563,
+        "sem": 0.005227737671565165,
+        "n": 144
+      },
+      "share_answer_instruction": {
+        "mean": 0.41125570455185817,
+        "sem": 0.005349478371071315,
+        "n": 144
+      },
+      "share_prompt_other": {
+        "mean": 0.07010563172253723,
+        "sem": 0.002664829366877616,
+        "n": 144
+      },
+      "density_instruction": {
+        "mean": 0.4409230373611454,
+        "sem": 0.004254659318888379,
+        "n": 144
+      },
+      "density_equation": {
+        "mean": 1.7864517283056982,
+        "sem": 0.04563659197650521,
+        "n": 144
+      },
+      "density_answer_instruction": {
+        "mean": 0.9026019864467667,
+        "sem": 0.009044323059775457,
+        "n": 144
+      },
+      "density_prompt_other": {
+        "mean": 0.5368756069156209,
+        "sem": 0.014683230195782715,
+        "n": 144
+      },
+      "share_conditions": {
+        "mean": 0.3129934049998297,
+        "sem": 0.008783947089779998,
+        "n": 144
+      },
+      "density_sufficient": {
+        "mean": 1.3894248650713674,
+        "sem": 0.03549861911072245,
+        "n": 144
+      },
+      "density_distractor": {
+        "mean": 1.0602178628729415,
+        "sem": 0.030857087788203525,
+        "n": 108
+      },
+      "distractor_over_sufficient": {
+        "mean": 0.9146086457024007,
+        "sem": 0.048916499185872146,
+        "n": 108
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.5605535015349256,
+        "sem": 0.014120387693591257,
+        "n": 36
+      }
+    },
+    "attn | subtype=none": {
+      "share_instruction": {
+        "mean": 0.03647165363710615,
+        "sem": 0.0009049057728241855,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.1920853698027617,
+        "sem": 0.01391690772147268,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.43121023189646407,
+        "sem": 0.011218652300798654,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.06178814442165586,
+        "sem": 0.00463019843523777,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 0.41476371429615155,
+        "sem": 0.007589676311726932,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 1.7297150092515163,
+        "sem": 0.09662444832696415,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.8525697373784399,
+        "sem": 0.01664476322445901,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 0.522067097511414,
+        "sem": 0.03113923321208301,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.27844460024201223,
+        "sem": 0.019884173957898762,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 1.54297279794003,
+        "sem": 0.06529116033005815,
+        "n": 36
+      }
+    },
+    "attn | order=1": {
+      "share_instruction": {
+        "mean": 0.03576395769338023,
+        "sem": 0.0005413224991287622,
+        "n": 72
+      },
+      "share_equation": {
+        "mean": 0.1846315629913968,
+        "sem": 0.008746237995177573,
+        "n": 72
+      },
+      "share_answer_instruction": {
+        "mean": 0.4331345828490246,
+        "sem": 0.008108733202587811,
+        "n": 72
+      },
+      "share_prompt_other": {
+        "mean": 0.07427268331818666,
+        "sem": 0.004093748238053455,
+        "n": 72
+      },
+      "density_instruction": {
+        "mean": 0.41317863955816825,
+        "sem": 0.0044779360056554016,
+        "n": 72
+      },
+      "density_equation": {
+        "mean": 1.9998759915314375,
+        "sem": 0.05880249583319234,
+        "n": 72
+      },
+      "density_answer_instruction": {
+        "mean": 0.8677776858806346,
+        "sem": 0.01132873308496568,
+        "n": 72
+      },
+      "density_prompt_other": {
+        "mean": 0.5775697846595382,
+        "sem": 0.022946022443588114,
+        "n": 72
+      },
+      "share_conditions": {
+        "mean": 0.2721972131480117,
+        "sem": 0.012870525908848946,
+        "n": 72
+      },
+      "density_sufficient": {
+        "mean": 1.4940175596698673,
+        "sem": 0.06388203226150459,
+        "n": 72
+      },
+      "density_distractor": {
+        "mean": 1.1242212712382396,
+        "sem": 0.040659171180982744,
+        "n": 54
+      },
+      "distractor_over_sufficient": {
+        "mean": 0.967656457354795,
+        "sem": 0.07691416326810341,
+        "n": 54
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.5478353826167742,
+        "sem": 0.017080155213979195,
+        "n": 18
+      }
+    },
+    "attn | correct": {
+      "share_instruction": {
+        "mean": 0.03508325986161177,
+        "sem": 0.0003706535577990829,
+        "n": 126
+      },
+      "share_equation": {
+        "mean": 0.17503161530289865,
+        "sem": 0.00569864184475611,
+        "n": 126
+      },
+      "share_answer_instruction": {
+        "mean": 0.4121477902706246,
+        "sem": 0.005774344357676831,
+        "n": 126
+      },
+      "share_prompt_other": {
+        "mean": 0.07071778999342841,
+        "sem": 0.0028438100571112628,
+        "n": 126
+      },
+      "density_instruction": {
+        "mean": 0.4410596669061866,
+        "sem": 0.004544509257077237,
+        "n": 126
+      },
+      "density_equation": {
+        "mean": 1.8248090241153647,
+        "sem": 0.04716109323930239,
+        "n": 126
+      },
+      "density_answer_instruction": {
+        "mean": 0.896750063734201,
+        "sem": 0.009458629713883922,
+        "n": 126
+      },
+      "density_prompt_other": {
+        "mean": 0.5389551882733912,
+        "sem": 0.015584622218504356,
+        "n": 126
+      },
+      "share_conditions": {
+        "mean": 0.30701954457143654,
+        "sem": 0.00941867245468424,
+        "n": 126
+      },
+      "density_sufficient": {
+        "mean": 1.395949350548431,
+        "sem": 0.03798036455138528,
+        "n": 126
+      },
+      "density_distractor": {
+        "mean": 1.058162615083637,
+        "sem": 0.033105745045809216,
+        "n": 94
+      },
+      "distractor_over_sufficient": {
+        "mean": 0.9085645136930214,
+        "sem": 0.052625933138385456,
+        "n": 94
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.5489618605278814,
+        "sem": 0.012876456172033111,
+        "n": 30
+      }
+    },
+    "rollout | all": {
+      "share_instruction": {
+        "mean": 0.3412658673696474,
+        "sem": 0.0014923178019489384,
+        "n": 144
+      },
+      "share_equation": {
+        "mean": 0.16135455964479237,
+        "sem": 0.002430588815082769,
+        "n": 144
+      },
+      "share_answer_instruction": {
+        "mean": 0.16245265951739402,
+        "sem": 0.0032472542873450707,
+        "n": 144
+      },
+      "share_prompt_other": {
+        "mean": 0.21448432413009488,
+        "sem": 0.001145857221486807,
+        "n": 144
+      },
+      "density_instruction": {
+        "mean": 4.347001453493543,
+        "sem": 0.03994139214205283,
+        "n": 144
+      },
+      "density_equation": {
+        "mean": 1.7044388473615693,
+        "sem": 0.020917067853787788,
+        "n": 144
+      },
+      "density_answer_instruction": {
+        "mean": 0.3508550621028441,
+        "sem": 0.003684060981700043,
+        "n": 144
+      },
+      "density_prompt_other": {
+        "mean": 1.7465332039327444,
+        "sem": 0.018346550578311565,
+        "n": 144
+      },
+      "share_conditions": {
+        "mean": 0.1204425893380713,
+        "sem": 0.003006436295691975,
+        "n": 144
+      },
+      "density_sufficient": {
+        "mean": 0.5327990763300174,
+        "sem": 0.015348386312395733,
+        "n": 144
+      },
+      "density_distractor": {
+        "mean": 0.4747002074676552,
+        "sem": 0.02313958916008664,
+        "n": 108
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.3184017314212841,
+        "sem": 0.10908157389489435,
+        "n": 108
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.3936435003825507,
+        "sem": 0.018448472674905535,
+        "n": 36
+      }
+    },
+    "rollout | subtype=none": {
+      "share_instruction": {
+        "mean": 0.3444346602229189,
+        "sem": 0.003005876791189339,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.1620017009237683,
+        "sem": 0.00516446927445704,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.18938693218048258,
+        "sem": 0.007117928425350113,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.20530132468418164,
+        "sem": 0.001672222810643437,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 3.9480321058570707,
+        "sem": 0.0663804711290502,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 1.4946296698533104,
+        "sem": 0.02847977289774085,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.3692915131622135,
+        "sem": 0.00787333301648925,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 1.80516578619262,
+        "sem": 0.0302118782041952,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.09887538198864858,
+        "sem": 0.0064473432991662,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 0.5751829634306822,
+        "sem": 0.01401461766391166,
+        "n": 36
+      }
+    },
+    "rollout | order=1": {
+      "share_instruction": {
+        "mean": 0.354107636045917,
+        "sem": 0.0011369437331019405,
+        "n": 72
+      },
+      "share_equation": {
+        "mean": 0.15146723607639268,
+        "sem": 0.0036020235016086316,
+        "n": 72
+      },
+      "share_answer_instruction": {
+        "mean": 0.18013667292943425,
+        "sem": 0.004535230525400496,
+        "n": 72
+      },
+      "share_prompt_other": {
+        "mean": 0.21352439355768754,
+        "sem": 0.0017769947566585872,
+        "n": 72
+      },
+      "density_instruction": {
+        "mean": 4.125936400516325,
+        "sem": 0.050838349646445465,
+        "n": 72
+      },
+      "density_equation": {
+        "mean": 1.7093217949541404,
+        "sem": 0.026634203812295556,
+        "n": 72
+      },
+      "density_answer_instruction": {
+        "mean": 0.35749347651794283,
+        "sem": 0.005135411200778798,
+        "n": 72
+      },
+      "density_prompt_other": {
+        "mean": 1.774511739333355,
+        "sem": 0.02532146210156871,
+        "n": 72
+      },
+      "share_conditions": {
+        "mean": 0.10076406139056854,
+        "sem": 0.0037096164216298667,
+        "n": 72
+      },
+      "density_sufficient": {
+        "mean": 0.5377659782525857,
+        "sem": 0.02412773232179913,
+        "n": 72
+      },
+      "density_distractor": {
+        "mean": 0.46897918036284003,
+        "sem": 0.02668677555526413,
+        "n": 54
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.322859226555433,
+        "sem": 0.13728912989563127,
+        "n": 54
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.4018611489667545,
+        "sem": 0.01351234441094835,
+        "n": 18
+      }
+    },
+    "rollout | correct": {
+      "share_instruction": {
+        "mean": 0.34236917143937023,
+        "sem": 0.0015320815693491848,
+        "n": 126
+      },
+      "share_equation": {
+        "mean": 0.1606470402067526,
+        "sem": 0.0025441748997350358,
+        "n": 126
+      },
+      "share_answer_instruction": {
+        "mean": 0.16462172654569804,
+        "sem": 0.003453357770089179,
+        "n": 126
+      },
+      "share_prompt_other": {
+        "mean": 0.21431961378391093,
+        "sem": 0.0012466867860577676,
+        "n": 126
+      },
+      "density_instruction": {
+        "mean": 4.32437566002321,
+        "sem": 0.04177847235276415,
+        "n": 126
+      },
+      "density_equation": {
+        "mean": 1.6985365791100837,
+        "sem": 0.022794622179479092,
+        "n": 126
+      },
+      "density_answer_instruction": {
+        "mean": 0.35299278911583126,
+        "sem": 0.004014058558795709,
+        "n": 126
+      },
+      "density_prompt_other": {
+        "mean": 1.7348051717592854,
+        "sem": 0.019335409676503473,
+        "n": 126
+      },
+      "share_conditions": {
+        "mean": 0.11804244802426819,
+        "sem": 0.003179731437982458,
+        "n": 126
+      },
+      "density_sufficient": {
+        "mean": 0.5349050741717779,
+        "sem": 0.01589176531878231,
+        "n": 126
+      },
+      "density_distractor": {
+        "mean": 0.4661976212794017,
+        "sem": 0.024172064433341883,
+        "n": 94
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.2730502995431063,
+        "sem": 0.1144983389466447,
+        "n": 94
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.40140128490658616,
+        "sem": 0.020787145579688866,
+        "n": 30
+      }
+    },
+    "gxi | subtype=duplicate": {
+      "share_instruction": {
+        "mean": 0.07892007665123024,
+        "sem": 0.011273671716939403,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.24370315946754298,
+        "sem": 0.02541130827688859,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.22668175454059356,
+        "sem": 0.024467458132921328,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.09359266229887014,
+        "sem": 0.011689952949132332,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 1.0323094879597827,
+        "sem": 0.15194164505932464,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 2.7855097398862534,
+        "sem": 0.3111514004164209,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.5017081808485212,
+        "sem": 0.05214546056837926,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 0.7241253819522627,
+        "sem": 0.08844486109338269,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.35710234704176314,
+        "sem": 0.028077088650221318,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 1.323998426811296,
+        "sem": 0.14444022165277942,
+        "n": 36
+      },
+      "density_distractor": {
+        "mean": 1.3467150556753942,
+        "sem": 0.18642313034772653,
+        "n": 36
+      },
+      "distractor_over_sufficient": {
+        "mean": 3.17414740377421,
+        "sem": 0.9775912544083348,
+        "n": 36
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.8386515537560314,
+        "sem": 0.2116371913839433,
+        "n": 36
+      }
+    },
+    "ig_pad | subtype=duplicate": {
+      "share_instruction": {
+        "mean": 0.15563708757158098,
+        "sem": 0.017500955786794056,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.2423985624806043,
+        "sem": 0.02506572842239081,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.22374944200481592,
+        "sem": 0.01895217910803833,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.12183567685190952,
+        "sem": 0.01521317752898408,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 2.0345005337480924,
+        "sem": 0.23374345471352895,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 2.620059779928901,
+        "sem": 0.277453142901892,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.4986269197449837,
+        "sem": 0.040987628519023094,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 0.9604613520504416,
+        "sem": 0.11614163116530209,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.25637923109108934,
+        "sem": 0.02392435477593846,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 1.1118461428613136,
+        "sem": 0.1394913415461517,
+        "n": 36
+      },
+      "density_distractor": {
+        "mean": 0.8794981066545338,
+        "sem": 0.16475896603371418,
+        "n": 36
+      },
+      "distractor_over_sufficient": {
+        "mean": 3.7349498461604833,
+        "sem": 1.843801460473002,
+        "n": 36
+      },
+      "duplicate_second_over_first": {
+        "mean": 1.2033549906785739,
+        "sem": 0.5031061614641844,
+        "n": 36
+      }
+    },
+    "ig_mask | subtype=duplicate": {
+      "share_instruction": {
+        "mean": 0.14112723133642838,
+        "sem": 0.019704823626172308,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.21394422652772216,
+        "sem": 0.025818311480584097,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.18370747026153192,
+        "sem": 0.017773450296103444,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.15863108958288505,
+        "sem": 0.01713035290184173,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 1.7776752282025208,
+        "sem": 0.24514517223995816,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 2.4334415313314723,
+        "sem": 0.33893434210976014,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.4177262618492742,
+        "sem": 0.04150261917820249,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 1.2375103321994427,
+        "sem": 0.12882002623454447,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.30258998229143247,
+        "sem": 0.02364053564095045,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 1.1927658225957076,
+        "sem": 0.12185841587374441,
+        "n": 36
+      },
+      "density_distractor": {
+        "mean": 1.2073010251850809,
+        "sem": 0.15532676139688797,
+        "n": 36
+      },
+      "distractor_over_sufficient": {
+        "mean": 3.7159373504478697,
+        "sem": 1.8399766245552251,
+        "n": 36
+      },
+      "duplicate_second_over_first": {
+        "mean": 3.2681224820958352,
+        "sem": 1.8412822322978757,
+        "n": 36
+      }
+    },
+    "attn | subtype=duplicate": {
+      "share_instruction": {
+        "mean": 0.034817209688956165,
+        "sem": 0.0005667228606805801,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.17295385972720334,
+        "sem": 0.01001487689668548,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.4033580518400455,
+        "sem": 0.009773318257418612,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.07443504052742861,
+        "sem": 0.005472852596953902,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 0.45250293627829635,
+        "sem": 0.008516867262217233,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 1.8980252250422656,
+        "sem": 0.10537478027528825,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.9054466882578289,
+        "sem": 0.015196599865691206,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 0.5567785371741056,
+        "sem": 0.028620077736763908,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.3144358382163664,
+        "sem": 0.01816214201277028,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 1.2674113946529608,
+        "sem": 0.0758308905611587,
+        "n": 36
+      },
+      "density_distractor": {
+        "mean": 1.054326004323271,
+        "sem": 0.064938370058301,
+        "n": 36
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.0164207937378573,
+        "sem": 0.11219163143140275,
+        "n": 36
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.5605535015349256,
+        "sem": 0.014120387693591257,
+        "n": 36
+      }
+    },
+    "rollout | subtype=duplicate": {
+      "share_instruction": {
+        "mean": 0.34126764828654377,
+        "sem": 0.0030360461102356003,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.1615025373934197,
+        "sem": 0.004486611883130676,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.15784485622410396,
+        "sem": 0.005953823496119191,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.21635603012084945,
+        "sem": 0.002086645348836399,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 4.4424197200594016,
+        "sem": 0.07283991214840023,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 1.7689233400782116,
+        "sem": 0.040152413908842235,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.3500017311932762,
+        "sem": 0.007348159219709399,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 1.7243930743668017,
+        "sem": 0.04010601725023365,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.12302892797508311,
+        "sem": 0.005622589232770315,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 0.5244583651392192,
+        "sem": 0.0339276869782622,
+        "n": 36
+      },
+      "density_distractor": {
+        "mean": 0.44841728189007996,
+        "sem": 0.03949215549310237,
+        "n": 36
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.239175866507174,
+        "sem": 0.186602573716479,
+        "n": 36
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.3936435003825507,
+        "sem": 0.018448472674905535,
+        "n": 36
+      }
+    },
+    "gxi | subtype=rescaled": {
+      "share_instruction": {
+        "mean": 0.06604976973191146,
+        "sem": 0.008515452092044934,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.19133598021702333,
+        "sem": 0.02535536394808074,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.20660325497880522,
+        "sem": 0.022500618948836773,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.14382582226402185,
+        "sem": 0.0183415447368223,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 0.8784119667536622,
+        "sem": 0.11482301308139829,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 2.2459186069889814,
+        "sem": 0.29576080760958606,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.49256103473457735,
+        "sem": 0.055733579636632,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 1.1050905019847652,
+        "sem": 0.1440010279637632,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.39218517280823817,
+        "sem": 0.028558371239715233,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 1.697382229760064,
+        "sem": 0.22794076852839093,
+        "n": 36
+      },
+      "density_distractor": {
+        "mean": 1.3659381867934894,
+        "sem": 0.15113251984890766,
+        "n": 36
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.9238609848284982,
+        "sem": 0.6811225566194176,
+        "n": 36
+      }
+    },
+    "ig_pad | subtype=rescaled": {
+      "share_instruction": {
+        "mean": 0.1488409766325845,
+        "sem": 0.015844575983136388,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.27025953015871074,
+        "sem": 0.026805281749751882,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.2179030810346392,
+        "sem": 0.021029315348520816,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.11172698262609611,
+        "sem": 0.01330984642290884,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 1.993033512482243,
+        "sem": 0.2150417463329264,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 3.05979210835652,
+        "sem": 0.31894573210107013,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.49698135574769103,
+        "sem": 0.04578938192033718,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 0.907074414662171,
+        "sem": 0.11004871246475086,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.25126942954796955,
+        "sem": 0.022304688101534575,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 1.1245217925694726,
+        "sem": 0.15688978764144906,
+        "n": 36
+      },
+      "density_distractor": {
+        "mean": 0.7852594824625109,
+        "sem": 0.11974012372480651,
+        "n": 36
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.4481034170488563,
+        "sem": 0.31955714428104776,
+        "n": 36
+      }
+    },
+    "ig_mask | subtype=rescaled": {
+      "share_instruction": {
+        "mean": 0.1615778685976741,
+        "sem": 0.01915612273029207,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.17069613857334967,
+        "sem": 0.019679032769692188,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.17789400393444982,
+        "sem": 0.018844514431614907,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.14381509963966987,
+        "sem": 0.019451089131526256,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 2.15986214572861,
+        "sem": 0.24079973654780862,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 1.860038696536182,
+        "sem": 0.18645991108072887,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.40677386781041697,
+        "sem": 0.04162292462128247,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 1.1090245829214902,
+        "sem": 0.14918083429534973,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.3460168892548565,
+        "sem": 0.026962986714266095,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 1.5510948707150767,
+        "sem": 0.1871194593525476,
+        "n": 36
+      },
+      "density_distractor": {
+        "mean": 1.250152293277943,
+        "sem": 0.21823131902944015,
+        "n": 36
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.9129673445532676,
+        "sem": 0.7157106483957193,
+        "n": 36
+      }
+    },
+    "attn | subtype=rescaled": {
+      "share_instruction": {
+        "mean": 0.03472233680398378,
+        "sem": 0.0006427773468834476,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.1577599554898015,
+        "sem": 0.006509403320130135,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.406191426651497,
+        "sem": 0.011060222679883117,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.07663950343569487,
+        "sem": 0.006094270819334095,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 0.4638976914846583,
+        "sem": 0.009258822006004854,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 1.8003884826785876,
+        "sem": 0.07298183437977884,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.9393723150312739,
+        "sem": 0.021314057554002935,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 0.5502887340384419,
+        "sem": 0.03183458527587384,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.3246867776190229,
+        "sem": 0.015229268639379527,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 1.3027068185339843,
+        "sem": 0.06541681477921042,
+        "n": 36
+      },
+      "density_distractor": {
+        "mean": 1.0512630871319237,
+        "sem": 0.049856774134919846,
+        "n": 36
+      },
+      "distractor_over_sufficient": {
+        "mean": 0.8975031036554587,
+        "sem": 0.0663818513879406,
+        "n": 36
+      }
+    },
+    "rollout | subtype=rescaled": {
+      "share_instruction": {
+        "mean": 0.3382263482588797,
+        "sem": 0.0028825023994451505,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.16108587511375522,
+        "sem": 0.00474924512438079,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.1499814106920786,
+        "sem": 0.00505204163178486,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.22016491849103972,
+        "sem": 0.002566052510688041,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 4.530421639378353,
+        "sem": 0.0756734334040397,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 1.821103803645543,
+        "sem": 0.03837375903638059,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.34325196313365247,
+        "sem": 0.006373715719770665,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 1.7041520421320846,
+        "sem": 0.0394003773143309,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.13054144744424678,
+        "sem": 0.005259040372160716,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 0.47199146565707917,
+        "sem": 0.03457535074536772,
+        "n": 36
+      },
+      "density_distractor": {
+        "mean": 0.530652653124668,
+        "sem": 0.04305859736882931,
+        "n": 36
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.5840602623677802,
+        "sem": 0.1971145540854551,
+        "n": 36
+      }
+    },
+    "gxi | subtype=unrelated": {
+      "share_instruction": {
+        "mean": 0.10133759858838368,
+        "sem": 0.012930370437810675,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.21411850461115386,
+        "sem": 0.026401163035002662,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.19835665838881383,
+        "sem": 0.02116475052747595,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.12650312986731532,
+        "sem": 0.01651404018901978,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 1.3281102079218317,
+        "sem": 0.17001279622156662,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 2.3006969116695606,
+        "sem": 0.2848211467837347,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.4407478647384932,
+        "sem": 0.042517357071899374,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 1.0016579810452244,
+        "sem": 0.1334583124685583,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.3596841085443333,
+        "sem": 0.027959197750607023,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 1.6572249445129448,
+        "sem": 0.1761616755228859,
+        "n": 36
+      },
+      "density_distractor": {
+        "mean": 1.0499951506050496,
+        "sem": 0.1544350052019542,
+        "n": 36
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.2098005254897841,
+        "sem": 0.29946446503152274,
+        "n": 36
+      }
+    },
+    "gxi | unrelated: no trap": {
+      "share_instruction": {
+        "mean": 0.10350627542668327,
+        "sem": 0.013116769167615304,
+        "n": 35
+      },
+      "share_equation": {
+        "mean": 0.20790605734374507,
+        "sem": 0.026403747900081743,
+        "n": 35
+      },
+      "share_answer_instruction": {
+        "mean": 0.1969384249200994,
+        "sem": 0.021729398650260752,
+        "n": 35
+      },
+      "share_prompt_other": {
+        "mean": 0.12969543877805637,
+        "sem": 0.01667228833105181,
+        "n": 35
+      },
+      "density_instruction": {
+        "mean": 1.355428473212441,
+        "sem": 0.17266852615046943,
+        "n": 35
+      },
+      "density_equation": {
+        "mean": 2.2554600396962865,
+        "sem": 0.2893583976812225,
+        "n": 35
+      },
+      "density_answer_instruction": {
+        "mean": 0.43531867634848936,
+        "sem": 0.0433918480989326,
+        "n": 35
+      },
+      "density_prompt_other": {
+        "mean": 1.0253386056322558,
+        "sem": 0.1351483466744473,
+        "n": 35
+      },
+      "share_conditions": {
+        "mean": 0.36195380353141593,
+        "sem": 0.028674823988809925,
+        "n": 35
+      },
+      "density_sufficient": {
+        "mean": 1.6668503114104531,
+        "sem": 0.18099808062553008,
+        "n": 35
+      },
+      "density_distractor": {
+        "mean": 1.0708780153857926,
+        "sem": 0.15745277204609318,
+        "n": 35
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.2374612025541891,
+        "sem": 0.30682907195041376,
+        "n": 35
+      }
+    },
+    "ig_pad | subtype=unrelated": {
+      "share_instruction": {
+        "mean": 0.1526067461132082,
+        "sem": 0.012627591831010407,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.2958062884480333,
+        "sem": 0.029044971567136497,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.18908604692796682,
+        "sem": 0.023665320424098784,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.13097787594266594,
+        "sem": 0.011532576281063524,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 2.0340407791029964,
+        "sem": 0.18028461884144542,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 3.2081733950313964,
+        "sem": 0.32118198376652457,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.4191053589944501,
+        "sem": 0.049683545862769796,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 1.074045622071201,
+        "sem": 0.10243884192598995,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.23152304256812575,
+        "sem": 0.020451586611357115,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 0.9727047671810792,
+        "sem": 0.12267957715022927,
+        "n": 36
+      },
+      "density_distractor": {
+        "mean": 0.7917648072156998,
+        "sem": 0.11470647673984126,
+        "n": 36
+      },
+      "distractor_over_sufficient": {
+        "mean": 2.162046352688124,
+        "sem": 0.571040378843735,
+        "n": 36
+      }
+    },
+    "ig_pad | unrelated: no trap": {
+      "share_instruction": {
+        "mean": 0.15333754622924609,
+        "sem": 0.012971906566608599,
+        "n": 35
+      },
+      "share_equation": {
+        "mean": 0.29723194511172935,
+        "sem": 0.029851004294303048,
+        "n": 35
+      },
+      "share_answer_instruction": {
+        "mean": 0.188860382570212,
+        "sem": 0.024350306671232648,
+        "n": 35
+      },
+      "share_prompt_other": {
+        "mean": 0.13163000266794014,
+        "sem": 0.011847935624177637,
+        "n": 35
+      },
+      "density_instruction": {
+        "mean": 2.0390763627199746,
+        "sem": 0.18543896417641198,
+        "n": 35
+      },
+      "density_equation": {
+        "mean": 3.236601927833206,
+        "sem": 0.3291963774674585,
+        "n": 35
+      },
+      "density_answer_instruction": {
+        "mean": 0.41676478972623077,
+        "sem": 0.051067185486650304,
+        "n": 35
+      },
+      "density_prompt_other": {
+        "mean": 1.0685784897152524,
+        "sem": 0.10525847244952583,
+        "n": 35
+      },
+      "share_conditions": {
+        "mean": 0.22894012342087242,
+        "sem": 0.020876001736881408,
+        "n": 35
+      },
+      "density_sufficient": {
+        "mean": 0.9799225839860952,
+        "sem": 0.12601756923865093,
+        "n": 35
+      },
+      "density_distractor": {
+        "mean": 0.7811529069813442,
+        "sem": 0.11752580213090351,
+        "n": 35
+      },
+      "distractor_over_sufficient": {
+        "mean": 2.1776663205777678,
+        "sem": 0.5873758369780456,
+        "n": 35
+      }
+    },
+    "ig_mask | subtype=unrelated": {
+      "share_instruction": {
+        "mean": 0.15845058355180786,
+        "sem": 0.020403191478091033,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.19666975657480842,
+        "sem": 0.026069021901570465,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.1931115405294894,
+        "sem": 0.02539594238870115,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.11778784480809988,
+        "sem": 0.016117675990786368,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 2.0375511968709263,
+        "sem": 0.25899930825917633,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 2.108228910729556,
+        "sem": 0.26785126748181787,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.4286602727118527,
+        "sem": 0.05505656162395441,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 0.9518518382680833,
+        "sem": 0.1331312322552801,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.33398027453579443,
+        "sem": 0.027626974382448863,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 1.44942659355289,
+        "sem": 0.15576983148703855,
+        "n": 36
+      },
+      "density_distractor": {
+        "mean": 1.1127246974747582,
+        "sem": 0.1576274610806941,
+        "n": 36
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.7051424283240424,
+        "sem": 0.41375478728753884,
+        "n": 36
+      }
+    },
+    "ig_mask | unrelated: no trap": {
+      "share_instruction": {
+        "mean": 0.15774255202272494,
+        "sem": 0.020982065800300646,
+        "n": 35
+      },
+      "share_equation": {
+        "mean": 0.19341205218532234,
+        "sem": 0.026614528065209607,
+        "n": 35
+      },
+      "share_answer_instruction": {
+        "mean": 0.19740414772840661,
+        "sem": 0.02575620249505712,
+        "n": 35
+      },
+      "share_prompt_other": {
+        "mean": 0.11826878854208416,
+        "sem": 0.016577566529068603,
+        "n": 35
+      },
+      "density_instruction": {
+        "mean": 2.0192022761131097,
+        "sem": 0.2658384359125796,
+        "n": 35
+      },
+      "density_equation": {
+        "mean": 2.088572459840075,
+        "sem": 0.27487351719535036,
+        "n": 35
+      },
+      "density_answer_instruction": {
+        "mean": 0.4377922905890956,
+        "sem": 0.05586799678030774,
+        "n": 35
+      },
+      "density_prompt_other": {
+        "mean": 0.945299852927508,
+        "sem": 0.13682490674931783,
+        "n": 35
+      },
+      "share_conditions": {
+        "mean": 0.3331724595214619,
+        "sem": 0.028415766824443956,
+        "n": 35
+      },
+      "density_sufficient": {
+        "mean": 1.4811622814101182,
+        "sem": 0.15692402757556453,
+        "n": 35
+      },
+      "density_distractor": {
+        "mean": 1.0936451970692065,
+        "sem": 0.16100475051785143,
+        "n": 35
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.603654076942212,
+        "sem": 0.41274379559727614,
+        "n": 35
+      }
+    },
+    "attn | subtype=unrelated": {
+      "share_instruction": {
+        "mean": 0.03314205651631088,
+        "sem": 0.000538344557198983,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.160628593236976,
+        "sem": 0.00945495812817158,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.40426310781942626,
+        "sem": 0.010425412572282083,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.0675598385053696,
+        "sem": 0.004858779775829736,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 0.43252780738547547,
+        "sem": 0.006284646110986391,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 1.7176781962504226,
+        "sem": 0.0876494883709218,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.913019205119524,
+        "sem": 0.016158143248317665,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 0.5183680589385222,
+        "sem": 0.026244299255567777,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.3344064039219173,
+        "sem": 0.01589444066558446,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 1.4446084491584945,
+        "sem": 0.070007294505969,
+        "n": 36
+      },
+      "density_distractor": {
+        "mean": 1.0750644971636296,
+        "sem": 0.044948811687261066,
+        "n": 36
+      },
+      "distractor_over_sufficient": {
+        "mean": 0.8299020397138864,
+        "sem": 0.06665262075612421,
+        "n": 36
+      }
+    },
+    "attn | unrelated: no trap": {
+      "share_instruction": {
+        "mean": 0.03323575567340417,
+        "sem": 0.0005454968563053832,
+        "n": 35
+      },
+      "share_equation": {
+        "mean": 0.15896272792878452,
+        "sem": 0.009576872471335967,
+        "n": 35
+      },
+      "share_answer_instruction": {
+        "mean": 0.40514229018704345,
+        "sem": 0.010689447193107101,
+        "n": 35
+      },
+      "share_prompt_other": {
+        "mean": 0.06881069664181064,
+        "sem": 0.004831122795967605,
+        "n": 35
+      },
+      "density_instruction": {
+        "mean": 0.4324074498675201,
+        "sem": 0.0064656614899643835,
+        "n": 35
+      },
+      "density_equation": {
+        "mean": 1.710457432965775,
+        "sem": 0.08988400401003306,
+        "n": 35
+      },
+      "density_answer_instruction": {
+        "mean": 0.9119635228934481,
+        "sem": 0.016591068307397875,
+        "n": 35
+      },
+      "density_prompt_other": {
+        "mean": 0.5252293262327594,
+        "sem": 0.02606592612587288,
+        "n": 35
+      },
+      "share_conditions": {
+        "mean": 0.3338485295689572,
+        "sem": 0.01634516723864148,
+        "n": 35
+      },
+      "density_sufficient": {
+        "mean": 1.4615367085821958,
+        "sem": 0.06989916927248857,
+        "n": 35
+      },
+      "density_distractor": {
+        "mean": 1.070969686585938,
+        "sem": 0.046059620935155886,
+        "n": 35
+      },
+      "distractor_over_sufficient": {
+        "mean": 0.8127613404477857,
+        "sem": 0.06627830320253364,
+        "n": 35
+      }
+    },
+    "rollout | subtype=unrelated": {
+      "share_instruction": {
+        "mean": 0.3411348127102474,
+        "sem": 0.0030467537997559374,
+        "n": 36
+      },
+      "share_equation": {
+        "mean": 0.16082812514822623,
+        "sem": 0.00521252146758077,
+        "n": 36
+      },
+      "share_answer_instruction": {
+        "mean": 0.1525974389729109,
+        "sem": 0.005669315656299437,
+        "n": 36
+      },
+      "share_prompt_other": {
+        "mean": 0.2161150232243087,
+        "sem": 0.002053178467358929,
+        "n": 36
+      },
+      "density_instruction": {
+        "mean": 4.467132348679344,
+        "sem": 0.06672275198315951,
+        "n": 36
+      },
+      "density_equation": {
+        "mean": 1.7330985758692123,
+        "sem": 0.03828400177650767,
+        "n": 36
+      },
+      "density_answer_instruction": {
+        "mean": 0.34087504092223414,
+        "sem": 0.00713943254215595,
+        "n": 36
+      },
+      "density_prompt_other": {
+        "mean": 1.7524219130394707,
+        "sem": 0.035535359680775126,
+        "n": 36
+      },
+      "share_conditions": {
+        "mean": 0.12932459994430676,
+        "sem": 0.005313133731995098,
+        "n": 36
+      },
+      "density_sufficient": {
+        "mean": 0.5595635110930891,
+        "sem": 0.03357913513197682,
+        "n": 36
+      },
+      "density_distractor": {
+        "mean": 0.4450306873882176,
+        "sem": 0.036915393282433706,
+        "n": 36
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.1319690653888985,
+        "sem": 0.17962578593923514,
+        "n": 36
+      }
+    },
+    "rollout | unrelated: no trap": {
+      "share_instruction": {
+        "mean": 0.3411504348274664,
+        "sem": 0.0031350425832932572,
+        "n": 35
+      },
+      "share_equation": {
+        "mean": 0.15955690176454562,
+        "sem": 0.0052016890970367794,
+        "n": 35
+      },
+      "share_answer_instruction": {
+        "mean": 0.1534277781383369,
+        "sem": 0.005770769058036155,
+        "n": 35
+      },
+      "share_prompt_other": {
+        "mean": 0.21685925076339446,
+        "sem": 0.0019690249811707915,
+        "n": 35
+      },
+      "density_instruction": {
+        "mean": 4.452447556794871,
+        "sem": 0.06697369340942173,
+        "n": 35
+      },
+      "density_equation": {
+        "mean": 1.7298188639742347,
+        "sem": 0.03924909071586135,
+        "n": 35
+      },
+      "density_answer_instruction": {
+        "mean": 0.3416368983166514,
+        "sem": 0.007304467875381673,
+        "n": 35
+      },
+      "density_prompt_other": {
+        "mean": 1.7389544078557757,
+        "sem": 0.03383783615999887,
+        "n": 35
+      },
+      "share_conditions": {
+        "mean": 0.12900563450625657,
+        "sem": 0.005457308752064331,
+        "n": 35
+      },
+      "density_sufficient": {
+        "mean": 0.5692930045572782,
+        "sem": 0.033070437230565866,
+        "n": 35
+      },
+      "density_distractor": {
+        "mean": 0.4405222543630669,
+        "sem": 0.037701275740141184,
+        "n": 35
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.0856757009410747,
+        "sem": 0.17858961383459074,
+        "n": 35
+      }
+    },
+    "gxi | wrong": {
+      "share_instruction": {
+        "mean": 0.09971422330942607,
+        "sem": 0.01754544932357819,
+        "n": 18
+      },
+      "share_equation": {
+        "mean": 0.23957630185638554,
+        "sem": 0.046010508018698756,
+        "n": 18
+      },
+      "share_answer_instruction": {
+        "mean": 0.20871831521955217,
+        "sem": 0.030138506696161794,
+        "n": 18
+      },
+      "share_prompt_other": {
+        "mean": 0.11727301800754925,
+        "sem": 0.01566724865634116,
+        "n": 18
+      },
+      "density_instruction": {
+        "mean": 1.30689983108483,
+        "sem": 0.22475902447581392,
+        "n": 18
+      },
+      "density_equation": {
+        "mean": 2.71135001446593,
+        "sem": 0.5789528548343251,
+        "n": 18
+      },
+      "density_answer_instruction": {
+        "mean": 0.4910685050262369,
+        "sem": 0.07288894039846101,
+        "n": 18
+      },
+      "density_prompt_other": {
+        "mean": 0.9938963607951572,
+        "sem": 0.14052266659011126,
+        "n": 18
+      },
+      "share_conditions": {
+        "mean": 0.334718141607087,
+        "sem": 0.04652891377264041,
+        "n": 18
+      },
+      "density_sufficient": {
+        "mean": 1.166517406936507,
+        "sem": 0.16914414214349685,
+        "n": 18
+      },
+      "density_distractor": {
+        "mean": 1.055552463965713,
+        "sem": 0.19226265084866823,
+        "n": 14
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.5560874823456305,
+        "sem": 0.6008412793307443,
+        "n": 14
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.5092561153874106,
+        "sem": 0.09715084460870058,
+        "n": 6
+      }
+    },
+    "gxi | unrelated: trap": {
+      "share_instruction": {
+        "mean": 0.02543390924789764,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_equation": {
+        "mean": 0.43155415897046157,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_answer_instruction": {
+        "mean": 0.24799482979381957,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_prompt_other": {
+        "mean": 0.014772317991379102,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_instruction": {
+        "mean": 0.371970922750503,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_equation": {
+        "mean": 3.8839874307341544,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_answer_instruction": {
+        "mean": 0.6307694583886281,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_prompt_other": {
+        "mean": 0.1728361204991355,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_conditions": {
+        "mean": 0.2802447839964421,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_sufficient": {
+        "mean": 1.3203371031001456,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_distractor": {
+        "mean": 0.3190948832790406,
+        "sem": 0.0,
+        "n": 1
+      },
+      "distractor_over_sufficient": {
+        "mean": 0.2416768282356129,
+        "sem": 0.0,
+        "n": 1
+      }
+    },
+    "ig_pad | wrong": {
+      "share_instruction": {
+        "mean": 0.15029438749478605,
+        "sem": 0.0162650149777975,
+        "n": 18
+      },
+      "share_equation": {
+        "mean": 0.21705378402783893,
+        "sem": 0.02584705646701599,
+        "n": 18
+      },
+      "share_answer_instruction": {
+        "mean": 0.19687942322546728,
+        "sem": 0.03241844345868569,
+        "n": 18
+      },
+      "share_prompt_other": {
+        "mean": 0.1633673196224682,
+        "sem": 0.020826146688459155,
+        "n": 18
+      },
+      "density_instruction": {
+        "mean": 2.0872572273108174,
+        "sem": 0.24623991629813172,
+        "n": 18
+      },
+      "density_equation": {
+        "mean": 2.178559183023703,
+        "sem": 0.24254502321967947,
+        "n": 18
+      },
+      "density_answer_instruction": {
+        "mean": 0.4569968812665166,
+        "sem": 0.0745848711087794,
+        "n": 18
+      },
+      "density_prompt_other": {
+        "mean": 1.3342547546094918,
+        "sem": 0.1510906510303243,
+        "n": 18
+      },
+      "share_conditions": {
+        "mean": 0.27240508562943955,
+        "sem": 0.03162454911139018,
+        "n": 18
+      },
+      "density_sufficient": {
+        "mean": 1.1932098226133006,
+        "sem": 0.2602011159091198,
+        "n": 18
+      },
+      "density_distractor": {
+        "mean": 0.858519061675814,
+        "sem": 0.22317375386989552,
+        "n": 14
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.5520063589753514,
+        "sem": 0.4161480766850237,
+        "n": 14
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.7890992651797135,
+        "sem": 0.35399805904751414,
+        "n": 6
+      }
+    },
+    "ig_pad | unrelated: trap": {
+      "share_instruction": {
+        "mean": 0.12702874205188214,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_equation": {
+        "mean": 0.24590830521867268,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_answer_instruction": {
+        "mean": 0.19698429944938403,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_prompt_other": {
+        "mean": 0.10815344055806803,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_instruction": {
+        "mean": 1.857795352508776,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_equation": {
+        "mean": 2.2131747469680545,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_answer_instruction": {
+        "mean": 0.5010252833821289,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_prompt_other": {
+        "mean": 1.2653952545293958,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_conditions": {
+        "mean": 0.32192521272199304,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_sufficient": {
+        "mean": 0.7200811790055132,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_distractor": {
+        "mean": 1.163181315418146,
+        "sem": 0.0,
+        "n": 1
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.6153474765506133,
+        "sem": 0.0,
+        "n": 1
+      }
+    },
+    "ig_mask | wrong": {
+      "share_instruction": {
+        "mean": 0.15687583479884074,
+        "sem": 0.02760645538941105,
+        "n": 18
+      },
+      "share_equation": {
+        "mean": 0.20418041788255772,
+        "sem": 0.024613900271932686,
+        "n": 18
+      },
+      "share_answer_instruction": {
+        "mean": 0.17574598899492885,
+        "sem": 0.02906132598464816,
+        "n": 18
+      },
+      "share_prompt_other": {
+        "mean": 0.11860102037860412,
+        "sem": 0.02024294546772285,
+        "n": 18
+      },
+      "density_instruction": {
+        "mean": 2.0560738640600076,
+        "sem": 0.32428810670098657,
+        "n": 18
+      },
+      "density_equation": {
+        "mean": 2.20064339470916,
+        "sem": 0.28519066480604954,
+        "n": 18
+      },
+      "density_answer_instruction": {
+        "mean": 0.3975501911925068,
+        "sem": 0.059791741993505544,
+        "n": 18
+      },
+      "density_prompt_other": {
+        "mean": 0.9770410084265492,
+        "sem": 0.15512753790826173,
+        "n": 18
+      },
+      "share_conditions": {
+        "mean": 0.34459673794506857,
+        "sem": 0.027320674000745435,
+        "n": 18
+      },
+      "density_sufficient": {
+        "mean": 1.2855905652505946,
+        "sem": 0.15142908687459367,
+        "n": 18
+      },
+      "density_distractor": {
+        "mean": 1.3355165617064804,
+        "sem": 0.20176530490593284,
+        "n": 14
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.8923114121664593,
+        "sem": 0.5183108219738699,
+        "n": 14
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.8561972332918851,
+        "sem": 0.22118338357721987,
+        "n": 6
+      }
+    },
+    "ig_mask | unrelated: trap": {
+      "share_instruction": {
+        "mean": 0.1832316870697098,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_equation": {
+        "mean": 0.31068941020682106,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_answer_instruction": {
+        "mean": 0.042870288567386394,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_prompt_other": {
+        "mean": 0.10095481411865093,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_instruction": {
+        "mean": 2.6797634233945056,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_equation": {
+        "mean": 2.79620469186139,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_answer_instruction": {
+        "mean": 0.10903964700835235,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_prompt_other": {
+        "mean": 1.1811713251882159,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_conditions": {
+        "mean": 0.3622538000374319,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_sufficient": {
+        "mean": 0.3386775185498981,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_distractor": {
+        "mean": 1.7805072116690783,
+        "sem": 0.0,
+        "n": 1
+      },
+      "distractor_over_sufficient": {
+        "mean": 5.257234726688103,
+        "sem": 0.0,
+        "n": 1
+      }
+    },
+    "attn | wrong": {
+      "share_instruction": {
+        "mean": 0.032723694261431645,
+        "sem": 0.0009401435482351173,
+        "n": 18
+      },
+      "share_equation": {
+        "mean": 0.14163424939319458,
+        "sem": 0.010497862054562612,
+        "n": 18
+      },
+      "share_answer_instruction": {
+        "mean": 0.40501110452049305,
+        "sem": 0.014385487462194688,
+        "n": 18
+      },
+      "share_prompt_other": {
+        "mean": 0.065820523826299,
+        "sem": 0.007770876983962403,
+        "n": 18
+      },
+      "density_instruction": {
+        "mean": 0.43996663054585744,
+        "sem": 0.012454134266622348,
+        "n": 18
+      },
+      "density_equation": {
+        "mean": 1.517950657638032,
+        "sem": 0.14431739716644273,
+        "n": 18
+      },
+      "density_answer_instruction": {
+        "mean": 0.9435654454347266,
+        "sem": 0.02805327007126162,
+        "n": 18
+      },
+      "density_prompt_other": {
+        "mean": 0.5223185374112292,
+        "sem": 0.044642816740585844,
+        "n": 18
+      },
+      "share_conditions": {
+        "mean": 0.35481042799858176,
+        "sem": 0.02255385666727212,
+        "n": 18
+      },
+      "density_sufficient": {
+        "mean": 1.3437534667319226,
+        "sem": 0.10204825900039276,
+        "n": 18
+      },
+      "density_distractor": {
+        "mean": 1.074017383743986,
+        "sem": 0.08829734672017227,
+        "n": 14
+      },
+      "distractor_over_sufficient": {
+        "mean": 0.9551906749082334,
+        "sem": 0.1369629551223482,
+        "n": 14
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.6185117065701459,
+        "sem": 0.05253282032741125,
+        "n": 6
+      }
+    },
+    "attn | unrelated: trap": {
+      "share_instruction": {
+        "mean": 0.02986258601804554,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_equation": {
+        "mean": 0.21893387902367725,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_answer_instruction": {
+        "mean": 0.3734917249528249,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_prompt_other": {
+        "mean": 0.023779803729933185,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_instruction": {
+        "mean": 0.436740320513916,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_equation": {
+        "mean": 1.9704049112130955,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_answer_instruction": {
+        "mean": 0.949968083032185,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_prompt_other": {
+        "mean": 0.27822370364021826,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_conditions": {
+        "mean": 0.35393200627551913,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_sufficient": {
+        "mean": 0.8521193693289453,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_distractor": {
+        "mean": 1.2183828673828416,
+        "sem": 0.0,
+        "n": 1
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.429826514027411,
+        "sem": 0.0,
+        "n": 1
+      }
+    },
+    "rollout | wrong": {
+      "share_instruction": {
+        "mean": 0.33354273888158786,
+        "sem": 0.005003938712194101,
+        "n": 18
+      },
+      "share_equation": {
+        "mean": 0.16630719571107058,
+        "sem": 0.007921394498446296,
+        "n": 18
+      },
+      "share_answer_instruction": {
+        "mean": 0.14726919031926602,
+        "sem": 0.008959549305017503,
+        "n": 18
+      },
+      "share_prompt_other": {
+        "mean": 0.21563729655338248,
+        "sem": 0.0028757654080443667,
+        "n": 18
+      },
+      "density_instruction": {
+        "mean": 4.505382007785869,
+        "sem": 0.12581770064874456,
+        "n": 18
+      },
+      "density_equation": {
+        "mean": 1.7457547251219692,
+        "sem": 0.050834700375540734,
+        "n": 18
+      },
+      "density_answer_instruction": {
+        "mean": 0.3358909730119338,
+        "sem": 0.008303866333575265,
+        "n": 18
+      },
+      "density_prompt_other": {
+        "mean": 1.828629429146957,
+        "sem": 0.0543611582943136,
+        "n": 18
+      },
+      "share_conditions": {
+        "mean": 0.13724357853469304,
+        "sem": 0.008298733507593935,
+        "n": 18
+      },
+      "density_sufficient": {
+        "mean": 0.5180570914376937,
+        "sem": 0.053284705312220106,
+        "n": 18
+      },
+      "density_distractor": {
+        "mean": 0.5317890004459287,
+        "sem": 0.0751290521148196,
+        "n": 14
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.6229042026033367,
+        "sem": 0.3429389381276602,
+        "n": 14
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.35485457776237334,
+        "sem": 0.03744838455835659,
+        "n": 6
+      }
+    },
+    "rollout | unrelated: trap": {
+      "share_instruction": {
+        "mean": 0.34058803860758313,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_equation": {
+        "mean": 0.20532094357704736,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_answer_instruction": {
+        "mean": 0.12353556818299995,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_prompt_other": {
+        "mean": 0.19006705935630708,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_instruction": {
+        "mean": 4.9811000646359025,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_equation": {
+        "mean": 1.8478884921934264,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_answer_instruction": {
+        "mean": 0.3142100321176303,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_prompt_other": {
+        "mean": 2.2237845944687926,
+        "sem": 0.0,
+        "n": 1
+      },
+      "share_conditions": {
+        "mean": 0.1404883902760624,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_sufficient": {
+        "mean": 0.2190312398464747,
+        "sem": 0.0,
+        "n": 1
+      },
+      "density_distractor": {
+        "mean": 0.6028258432684904,
+        "sem": 0.0,
+        "n": 1
+      },
+      "distractor_over_sufficient": {
+        "mean": 2.7522368210627324,
+        "sem": 0.0,
+        "n": 1
+      }
+    },
+    "gxi | order=2": {
+      "share_instruction": {
+        "mean": 0.0856639990118501,
+        "sem": 0.008365151696059931,
+        "n": 72
+      },
+      "share_equation": {
+        "mean": 0.20564597045424005,
+        "sem": 0.017018624268473143,
+        "n": 72
+      },
+      "share_answer_instruction": {
+        "mean": 0.19966613650570303,
+        "sem": 0.0144897468328858,
+        "n": 72
+      },
+      "share_prompt_other": {
+        "mean": 0.1237997748992407,
+        "sem": 0.01102974645743423,
+        "n": 72
+      },
+      "density_instruction": {
+        "mean": 1.1776214988463405,
+        "sem": 0.11123720098358376,
+        "n": 72
+      },
+      "density_equation": {
+        "mean": 2.1617588156704644,
+        "sem": 0.19417764119020464,
+        "n": 72
+      },
+      "density_answer_instruction": {
+        "mean": 0.48540178812995527,
+        "sem": 0.0357731854079485,
+        "n": 72
+      },
+      "density_prompt_other": {
+        "mean": 0.971151028588937,
+        "sem": 0.0837938152463978,
+        "n": 72
+      },
+      "share_conditions": {
+        "mean": 0.3852241191289661,
+        "sem": 0.018452213230778863,
+        "n": 72
+      },
+      "density_sufficient": {
+        "mean": 1.4432841114391288,
+        "sem": 0.08976240899442998,
+        "n": 72
+      },
+      "density_distractor": {
+        "mean": 1.2064152731036548,
+        "sem": 0.13976329727033154,
+        "n": 54
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.3614455061108865,
+        "sem": 0.23117384799412127,
+        "n": 54
+      },
+      "duplicate_second_over_first": {
+        "mean": 1.0439194400921752,
+        "sem": 0.3589595771369961,
+        "n": 18
+      }
+    },
+    "ig_pad | order=2": {
+      "share_instruction": {
+        "mean": 0.1507508072577437,
+        "sem": 0.011059777692034155,
+        "n": 72
+      },
+      "share_equation": {
+        "mean": 0.24880730145165644,
+        "sem": 0.015467070195203068,
+        "n": 72
+      },
+      "share_answer_instruction": {
+        "mean": 0.2048303168425215,
+        "sem": 0.017166241185398255,
+        "n": 72
+      },
+      "share_prompt_other": {
+        "mean": 0.13659849977641508,
+        "sem": 0.009454237210745385,
+        "n": 72
+      },
+      "density_instruction": {
+        "mean": 2.1109478275068456,
+        "sem": 0.15642324605264052,
+        "n": 72
+      },
+      "density_equation": {
+        "mean": 2.4808821343539336,
+        "sem": 0.1666967134335934,
+        "n": 72
+      },
+      "density_answer_instruction": {
+        "mean": 0.48229463349751683,
+        "sem": 0.03727112732120716,
+        "n": 72
+      },
+      "density_prompt_other": {
+        "mean": 1.1152158334269875,
+        "sem": 0.08096514839931596,
+        "n": 72
+      },
+      "share_conditions": {
+        "mean": 0.25901307467166323,
+        "sem": 0.01641958737440344,
+        "n": 72
+      },
+      "density_sufficient": {
+        "mean": 0.99194397104396,
+        "sem": 0.07735264685005781,
+        "n": 72
+      },
+      "density_distractor": {
+        "mean": 0.740506157074257,
+        "sem": 0.0957644495288296,
+        "n": 54
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.9054203565020897,
+        "sem": 0.6681155524319903,
+        "n": 54
+      },
+      "duplicate_second_over_first": {
+        "mean": 1.8977364316837297,
+        "sem": 0.9829188942675072,
+        "n": 18
+      }
+    },
+    "ig_mask | order=2": {
+      "share_instruction": {
+        "mean": 0.13627985348787466,
+        "sem": 0.011271746238758656,
+        "n": 72
+      },
+      "share_equation": {
+        "mean": 0.20937566613274558,
+        "sem": 0.01913086238871084,
+        "n": 72
+      },
+      "share_answer_instruction": {
+        "mean": 0.17613941431085353,
+        "sem": 0.014638473001508112,
+        "n": 72
+      },
+      "share_prompt_other": {
+        "mean": 0.11504087583649257,
+        "sem": 0.012106883582761468,
+        "n": 72
+      },
+      "density_instruction": {
+        "mean": 1.8704293178544162,
+        "sem": 0.15295028639554256,
+        "n": 72
+      },
+      "density_equation": {
+        "mean": 2.051707531301109,
+        "sem": 0.20155903332707187,
+        "n": 72
+      },
+      "density_answer_instruction": {
+        "mean": 0.4204743247006557,
+        "sem": 0.03407764892351046,
+        "n": 72
+      },
+      "density_prompt_other": {
+        "mean": 0.9085439029250408,
+        "sem": 0.09520860588960432,
+        "n": 72
+      },
+      "share_conditions": {
+        "mean": 0.36316419023203367,
+        "sem": 0.01745734419214647,
+        "n": 72
+      },
+      "density_sufficient": {
+        "mean": 1.2371850946040417,
+        "sem": 0.07455420882727391,
+        "n": 72
+      },
+      "density_distractor": {
+        "mean": 1.4050341596777673,
+        "sem": 0.1603660090932972,
+        "n": 54
+      },
+      "distractor_over_sufficient": {
+        "mean": 2.2285186821089553,
+        "sem": 0.5303208591022762,
+        "n": 54
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.6148531808655107,
+        "sem": 0.10045775482469853,
+        "n": 18
+      }
+    },
+    "attn | order=2": {
+      "share_instruction": {
+        "mean": 0.033812670629798265,
+        "sem": 0.0004165285383563404,
+        "n": 72
+      },
+      "share_equation": {
+        "mean": 0.15708232613697445,
+        "sem": 0.005314633708117655,
+        "n": 72
+      },
+      "share_answer_instruction": {
+        "mean": 0.3893768262546918,
+        "sem": 0.006003177343196273,
+        "n": 72
+      },
+      "share_prompt_other": {
+        "mean": 0.0659385801268878,
+        "sem": 0.0033700725352878427,
+        "n": 72
+      },
+      "density_instruction": {
+        "mean": 0.46866743516412257,
+        "sem": 0.005584207009083718,
+        "n": 72
+      },
+      "density_equation": {
+        "mean": 1.5730274650799587,
+        "sem": 0.06040390656028415,
+        "n": 72
+      },
+      "density_answer_instruction": {
+        "mean": 0.9374262870128987,
+        "sem": 0.012922913062487272,
+        "n": 72
+      },
+      "density_prompt_other": {
+        "mean": 0.4961814291717037,
+        "sem": 0.017184116822878813,
+        "n": 72
+      },
+      "share_conditions": {
+        "mean": 0.35378959685164774,
+        "sem": 0.009913193793162096,
+        "n": 72
+      },
+      "density_sufficient": {
+        "mean": 1.2848321704728676,
+        "sem": 0.026211302643440116,
+        "n": 72
+      },
+      "density_distractor": {
+        "mean": 0.9962144545076433,
+        "sem": 0.045131134771237286,
+        "n": 54
+      },
+      "distractor_over_sufficient": {
+        "mean": 0.8615608340500066,
+        "sem": 0.0603291883546555,
+        "n": 54
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.5732716204530768,
+        "sem": 0.02258843323122884,
+        "n": 18
+      }
+    },
+    "rollout | order=2": {
+      "share_instruction": {
+        "mean": 0.3284240986933779,
+        "sem": 0.0017414822588788022,
+        "n": 72
+      },
+      "share_equation": {
+        "mean": 0.171241883213192,
+        "sem": 0.0028406180867310013,
+        "n": 72
+      },
+      "share_answer_instruction": {
+        "mean": 0.14476864610535378,
+        "sem": 0.003619146629982118,
+        "n": 72
+      },
+      "share_prompt_other": {
+        "mean": 0.2154442547025022,
+        "sem": 0.001450956068802576,
+        "n": 72
+      },
+      "density_instruction": {
+        "mean": 4.5680665064707595,
+        "sem": 0.049649239510441444,
+        "n": 72
+      },
+      "density_equation": {
+        "mean": 1.6995558997689981,
+        "sem": 0.03244020762781713,
+        "n": 72
+      },
+      "density_answer_instruction": {
+        "mean": 0.34421664768774535,
+        "sem": 0.005201703954920128,
+        "n": 72
+      },
+      "density_prompt_other": {
+        "mean": 1.7185546685321338,
+        "sem": 0.026318019384379665,
+        "n": 72
+      },
+      "share_conditions": {
+        "mean": 0.14012111728557405,
+        "sem": 0.0034263243007029757,
+        "n": 72
+      },
+      "density_sufficient": {
+        "mean": 0.5278321744074491,
+        "sem": 0.01913335589677591,
+        "n": 72
+      },
+      "density_distractor": {
+        "mean": 0.48042123457247027,
+        "sem": 0.0380598024372357,
+        "n": 54
+      },
+      "distractor_over_sufficient": {
+        "mean": 1.3139442362871354,
+        "sem": 0.17086578070817032,
+        "n": 54
+      },
+      "duplicate_second_over_first": {
+        "mean": 0.3854258517983469,
+        "sem": 0.03479794780198389,
+        "n": 18
+      }
+    }
+  }
+}

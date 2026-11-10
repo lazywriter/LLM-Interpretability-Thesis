@@ -1,0 +1,35 @@
+{
+  "note": "Reported thesis results (test split, n=792). Batch size 8 runs are final by decision on 2026-11-02; no batch-size-1 rerun. Result folders are never edited.",
+  "split": "test",
+  "models": {
+    "qwen2.5-3b-instruct": {
+      "hf_name": "Qwen/Qwen2.5-3B-Instruct",
+      "prompt": "v1 (no system message)",
+      "baseline": "baseline/20261102T114129Z_qwen2.5-3b-instruct_test",
+      "baseline_duplicate": "baseline/20261102T114824Z_qwen2.5-3b-instruct_test",
+      "option_permutations": "option_permutations/20261102T174549Z_qwen2.5-3b-instruct_test",
+      "accuracy": 0.4343,
+      "acc_mean_over_orders": 0.4327,
+      "robust_correct": 0.0922,
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "revision_source": "recorded by the option_permutations run (same Colab setup, same day); the baseline summaries have revision null because of the transformers 5 bug fixed afterwards"
+    },
+    "phi-4-mini-instruct": {
+      "hf_name": "microsoft/Phi-4-mini-instruct",
+      "prompt": "v1+sys (--system letter-only)",
+      "baseline": "baseline/20261102T114426Z_phi-4-mini-instruct_sys_test",
+      "baseline_duplicate": "baseline/20261102T115021Z_phi-4-mini-instruct_sys_test",
+      "option_permutations": "option_permutations/20261102T175611Z_phi-4-mini-instruct_sys_test",
+      "accuracy": 0.4571,
+      "acc_mean_over_orders": 0.4478,
+      "robust_correct": 0.1212,
+      "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+      "revision_source": "recorded by the option_permutations run (same Colab setup, same day); the baseline summaries have revision null because of the transformers 5 bug fixed afterwards"
+    }
+  },
+  "environment": {"gpu": "Tesla T4", "dtype": "float16", "torch": "2.11.0+cu130", "transformers": "5.21.0", "batch_size": 8},
+  "known_caveats": [
+    "duplicate baseline runs are bit-identical (792/792 predictions, max log-prob diff 0.0)",
+    "the original-order scores inside option_permutations differ from the baseline on 1 (Qwen) / 2 (Phi) near-tie items because of fp16 batch composition; accepted as is"
+  ]
+}

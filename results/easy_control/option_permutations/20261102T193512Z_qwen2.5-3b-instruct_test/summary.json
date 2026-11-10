@@ -1,0 +1,281 @@
+{
+  "meta": {
+    "experiment": "option_permutations",
+    "model_key": "qwen2.5-3b-instruct",
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "dtype": "float16",
+    "device": "cuda",
+    "prompt_version": "v1",
+    "prompt_format": "chat",
+    "system": null,
+    "system_in_user_turn": false,
+    "template_kwargs": null,
+    "letter_tokens": {
+      "A": [
+        "A",
+        32
+      ],
+      "B": [
+        "B",
+        33
+      ],
+      "C": [
+        "C",
+        34
+      ]
+    },
+    "orders": [
+      "ABC",
+      "ACB",
+      "BAC",
+      "BCA",
+      "CAB",
+      "CBA"
+    ],
+    "split": "test",
+    "data": "easy_mcq/easy_mcq_test.jsonl",
+    "n_items": 144,
+    "limit": null,
+    "batch_size": 8,
+    "seed": 0,
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "python": "3.13.16",
+    "gpu": "Tesla T4",
+    "utc": "2026-11-02T19:35:12+00:00"
+  },
+  "report": {
+    "all": {
+      "n": 144,
+      "acc_original_order": 0.7014,
+      "acc_mean_over_orders": 0.7037,
+      "robust_correct": 0.4792,
+      "content_consistent": 0.4931,
+      "letter_consistent": 0.0625
+    },
+    "ode_type=add": {
+      "n": 24,
+      "acc_original_order": 0.375,
+      "acc_mean_over_orders": 0.4236,
+      "robust_correct": 0.0,
+      "content_consistent": 0.0,
+      "letter_consistent": 0.1667
+    },
+    "ode_type=div": {
+      "n": 24,
+      "acc_original_order": 0.9167,
+      "acc_mean_over_orders": 0.9583,
+      "robust_correct": 0.8333,
+      "content_consistent": 0.8333,
+      "letter_consistent": 0.0
+    },
+    "ode_type=mixed": {
+      "n": 24,
+      "acc_original_order": 0.4583,
+      "acc_mean_over_orders": 0.4375,
+      "robust_correct": 0.0833,
+      "content_consistent": 0.0833,
+      "letter_consistent": 0.0
+    },
+    "ode_type=mul": {
+      "n": 24,
+      "acc_original_order": 1.0,
+      "acc_mean_over_orders": 0.9931,
+      "robust_correct": 0.9583,
+      "content_consistent": 0.9583,
+      "letter_consistent": 0.0
+    },
+    "ode_type=pow": {
+      "n": 24,
+      "acc_original_order": 1.0,
+      "acc_mean_over_orders": 0.9861,
+      "robust_correct": 0.9583,
+      "content_consistent": 0.9583,
+      "letter_consistent": 0.0
+    },
+    "ode_type=sub": {
+      "n": 24,
+      "acc_original_order": 0.4583,
+      "acc_mean_over_orders": 0.4236,
+      "robust_correct": 0.0417,
+      "content_consistent": 0.125,
+      "letter_consistent": 0.2083
+    },
+    "order=1": {
+      "n": 120,
+      "acc_original_order": 0.75,
+      "acc_mean_over_orders": 0.7569,
+      "robust_correct": 0.5583,
+      "content_consistent": 0.575,
+      "letter_consistent": 0.075
+    },
+    "order=2": {
+      "n": 24,
+      "acc_original_order": 0.4583,
+      "acc_mean_over_orders": 0.4375,
+      "robust_correct": 0.0833,
+      "content_consistent": 0.0833,
+      "letter_consistent": 0.0
+    },
+    "subtype=E:add": {
+      "n": 24,
+      "acc_original_order": 0.375,
+      "acc_mean_over_orders": 0.4236,
+      "robust_correct": 0.0,
+      "content_consistent": 0.0,
+      "letter_consistent": 0.1667
+    },
+    "subtype=E:div": {
+      "n": 24,
+      "acc_original_order": 0.9167,
+      "acc_mean_over_orders": 0.9583,
+      "robust_correct": 0.8333,
+      "content_consistent": 0.8333,
+      "letter_consistent": 0.0
+    },
+    "subtype=E:mixed": {
+      "n": 24,
+      "acc_original_order": 0.4583,
+      "acc_mean_over_orders": 0.4375,
+      "robust_correct": 0.0833,
+      "content_consistent": 0.0833,
+      "letter_consistent": 0.0
+    },
+    "subtype=E:mul": {
+      "n": 24,
+      "acc_original_order": 1.0,
+      "acc_mean_over_orders": 0.9931,
+      "robust_correct": 0.9583,
+      "content_consistent": 0.9583,
+      "letter_consistent": 0.0
+    },
+    "subtype=E:pow": {
+      "n": 24,
+      "acc_original_order": 1.0,
+      "acc_mean_over_orders": 0.9861,
+      "robust_correct": 0.9583,
+      "content_consistent": 0.9583,
+      "letter_consistent": 0.0
+    },
+    "subtype=E:sub": {
+      "n": 24,
+      "acc_original_order": 0.4583,
+      "acc_mean_over_orders": 0.4236,
+      "robust_correct": 0.0417,
+      "content_consistent": 0.125,
+      "letter_consistent": 0.2083
+    },
+    "variant=E": {
+      "n": 144,
+      "acc_original_order": 0.7014,
+      "acc_mean_over_orders": 0.7037,
+      "robust_correct": 0.4792,
+      "content_consistent": 0.4931,
+      "letter_consistent": 0.0625
+    }
+  },
+  "n_correct_histogram": {
+    "0": 7,
+    "1": 10,
+    "2": 21,
+    "3": 15,
+    "4": 13,
+    "5": 9,
+    "6": 69
+  },
+  "n_correct_histogram_if_guessing": {
+    "0": 12.6,
+    "1": 37.9,
+    "2": 47.4,
+    "3": 31.6,
+    "4": 11.9,
+    "5": 2.4,
+    "6": 0.2
+  },
+  "pred_letter_counts_all_orders": {
+    "A": 337,
+    "B": 318,
+    "C": 209
+  },
+  "acc_by_order": {
+    "ABC": 0.7014,
+    "ACB": 0.7014,
+    "BAC": 0.7014,
+    "BCA": 0.7292,
+    "CAB": 0.7153,
+    "CBA": 0.6736
+  },
+  "trap_pick_rate_all_orders": null,
+  "robust_correct_ids": [
+    "easy-0042",
+    "easy-0048",
+    "easy-0049",
+    "easy-0050",
+    "easy-0051",
+    "easy-0052",
+    "easy-0053",
+    "easy-0054",
+    "easy-0055",
+    "easy-0056",
+    "easy-0057",
+    "easy-0058",
+    "easy-0059",
+    "easy-0060",
+    "easy-0061",
+    "easy-0062",
+    "easy-0063",
+    "easy-0064",
+    "easy-0065",
+    "easy-0067",
+    "easy-0068",
+    "easy-0069",
+    "easy-0070",
+    "easy-0071",
+    "easy-0072",
+    "easy-0075",
+    "easy-0076",
+    "easy-0077",
+    "easy-0078",
+    "easy-0080",
+    "easy-0081",
+    "easy-0082",
+    "easy-0084",
+    "easy-0085",
+    "easy-0086",
+    "easy-0087",
+    "easy-0088",
+    "easy-0089",
+    "easy-0090",
+    "easy-0091",
+    "easy-0092",
+    "easy-0093",
+    "easy-0094",
+    "easy-0095",
+    "easy-0096",
+    "easy-0097",
+    "easy-0098",
+    "easy-0099",
+    "easy-0100",
+    "easy-0101",
+    "easy-0102",
+    "easy-0103",
+    "easy-0104",
+    "easy-0105",
+    "easy-0106",
+    "easy-0107",
+    "easy-0108",
+    "easy-0110",
+    "easy-0111",
+    "easy-0112",
+    "easy-0113",
+    "easy-0114",
+    "easy-0115",
+    "easy-0116",
+    "easy-0117",
+    "easy-0118",
+    "easy-0119",
+    "easy-0136",
+    "easy-0141"
+  ]
+}

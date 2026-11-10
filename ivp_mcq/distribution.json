@@ -1,0 +1,311 @@
+{
+  "total": 864,
+  "by_split": {
+    "dev": {
+      "count": 72,
+      "pct": 8.3
+    },
+    "test": {
+      "count": 792,
+      "pct": 91.7
+    }
+  },
+  "by_variant": {
+    "B": {
+      "count": 432,
+      "pct": 50.0
+    },
+    "C": {
+      "count": 432,
+      "pct": 50.0
+    }
+  },
+  "by_ode_type": {
+    "first_order_direct": {
+      "count": 144,
+      "pct": 16.7
+    },
+    "first_order_linear": {
+      "count": 144,
+      "pct": 16.7
+    },
+    "first_order_separable": {
+      "count": 144,
+      "pct": 16.7
+    },
+    "second_order_direct": {
+      "count": 144,
+      "pct": 16.7
+    },
+    "second_order_homogeneous": {
+      "count": 144,
+      "pct": 16.7
+    },
+    "second_order_nonhomogeneous": {
+      "count": 144,
+      "pct": 16.7
+    }
+  },
+  "by_category": {
+    "direct2_exp": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "direct2_power": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "direct2_trig": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "direct_exp": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "direct_power": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "direct_trig": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "hom_complex": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "hom_real_distinct": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "hom_repeated": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "linear_const_forcing": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "linear_exp_forcing": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "linear_poly_forcing": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "nonhom_complex": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "nonhom_real_distinct": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "nonhom_repeated": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "separable_exponential": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "separable_xy": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "separable_y_over_x": {
+      "count": 48,
+      "pct": 5.6
+    }
+  },
+  "by_variant_subtype": {
+    "B:duplicate": {
+      "count": 144,
+      "pct": 16.7
+    },
+    "B:rescaled": {
+      "count": 144,
+      "pct": 16.7
+    },
+    "B:unrelated": {
+      "count": 144,
+      "pct": 16.7
+    },
+    "C:extra1_direct": {
+      "count": 108,
+      "pct": 12.5
+    },
+    "C:extra1_indirect": {
+      "count": 108,
+      "pct": 12.5
+    },
+    "C:extra2_direct": {
+      "count": 108,
+      "pct": 12.5
+    },
+    "C:extra2_indirect": {
+      "count": 108,
+      "pct": 12.5
+    }
+  },
+  "by_answer_letter": {
+    "A": {
+      "count": 288,
+      "pct": 33.3
+    },
+    "B": {
+      "count": 288,
+      "pct": 33.3
+    },
+    "C": {
+      "count": 288,
+      "pct": 33.3
+    }
+  },
+  "by_order": {
+    "1": {
+      "count": 432,
+      "pct": 50.0
+    },
+    "2": {
+      "count": 432,
+      "pct": 50.0
+    }
+  },
+  "by_n_conditions": {
+    "2": {
+      "count": 324,
+      "pct": 37.5
+    },
+    "3": {
+      "count": 432,
+      "pct": 50.0
+    },
+    "4": {
+      "count": 108,
+      "pct": 12.5
+    }
+  },
+  "B_distractor_position": {
+    "1": {
+      "count": 180,
+      "pct": 20.8
+    },
+    "2": {
+      "count": 180,
+      "pct": 20.8
+    },
+    "3": {
+      "count": 72,
+      "pct": 8.3
+    },
+    "n/a": {
+      "count": 432,
+      "pct": 50.0
+    }
+  },
+  "B_trap_letter": {
+    "A": {
+      "count": 48,
+      "pct": 5.6
+    },
+    "B": {
+      "count": 44,
+      "pct": 5.1
+    },
+    "C": {
+      "count": 52,
+      "pct": 6.0
+    },
+    "n/a": {
+      "count": 720,
+      "pct": 83.3
+    }
+  },
+  "option_roles": {
+    "correct": 864,
+    "trap": 144,
+    "distractor": 1584
+  },
+  "condition_points": {
+    "1": 597,
+    "-1": 603,
+    "pi/2": 191,
+    "0": 699,
+    "2": 53,
+    "pi": 207,
+    "3": 26
+  },
+  "condition_derivative_order": {
+    "0": 1400,
+    "1": 976
+  },
+  "answer_letter_by_variant_ode_type": {
+    "B|first_order_direct": {
+      "A": 24,
+      "B": 24,
+      "C": 24
+    },
+    "B|first_order_linear": {
+      "A": 24,
+      "B": 24,
+      "C": 24
+    },
+    "B|first_order_separable": {
+      "A": 24,
+      "B": 24,
+      "C": 24
+    },
+    "B|second_order_direct": {
+      "A": 24,
+      "B": 24,
+      "C": 24
+    },
+    "B|second_order_homogeneous": {
+      "A": 24,
+      "B": 24,
+      "C": 24
+    },
+    "B|second_order_nonhomogeneous": {
+      "A": 24,
+      "B": 24,
+      "C": 24
+    },
+    "C|first_order_direct": {
+      "A": 24,
+      "B": 24,
+      "C": 24
+    },
+    "C|first_order_linear": {
+      "A": 24,
+      "B": 24,
+      "C": 24
+    },
+    "C|first_order_separable": {
+      "A": 24,
+      "B": 24,
+      "C": 24
+    },
+    "C|second_order_direct": {
+      "A": 24,
+      "B": 24,
+      "C": 24
+    },
+    "C|second_order_homogeneous": {
+      "A": 24,
+      "B": 24,
+      "C": 24
+    },
+    "C|second_order_nonhomogeneous": {
+      "A": 24,
+      "B": 24,
+      "C": 24
+    }
+  },
+  "C_sufficient_set_uses_x0_only": {
+    "false": 373,
+    "true": 59
+  }
+}

@@ -1,0 +1,144 @@
+{"id": "easy-0000", "category": "add", "expression": "17 + 40", "value": 57, "read": 57, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "57"}
+{"id": "easy-0001", "category": "add", "expression": "6 + 17", "value": 23, "read": 23, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "23"}
+{"id": "easy-0002", "category": "add", "expression": "21 + 29", "value": 50, "read": 49, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "49"}
+{"id": "easy-0003", "category": "add", "expression": "39 + 22", "value": 61, "read": 61, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "61"}
+{"id": "easy-0004", "category": "add", "expression": "40 + 39", "value": 79, "read": 79, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "79"}
+{"id": "easy-0005", "category": "add", "expression": "9 + 38", "value": 47, "read": 37, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "37"}
+{"id": "easy-0006", "category": "add", "expression": "42 + 16", "value": 58, "read": 58, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "58"}
+{"id": "easy-0007", "category": "add", "expression": "52 + 23", "value": 75, "read": 75, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "75"}
+{"id": "easy-0008", "category": "add", "expression": "26 + 22", "value": 48, "read": 48, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "48"}
+{"id": "easy-0009", "category": "add", "expression": "8 + 39", "value": 47, "read": 43, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "43"}
+{"id": "easy-0010", "category": "add", "expression": "59 + 24", "value": 83, "read": 83, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "83"}
+{"id": "easy-0011", "category": "add", "expression": "41 + 7", "value": 48, "read": 48, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "48"}
+{"id": "easy-0012", "category": "add", "expression": "13 + 24", "value": 37, "read": 37, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "37"}
+{"id": "easy-0013", "category": "add", "expression": "5 + 7", "value": 12, "read": 12, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "12"}
+{"id": "easy-0014", "category": "add", "expression": "24 + 25", "value": 49, "read": 49, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "49"}
+{"id": "easy-0015", "category": "add", "expression": "7 + 8", "value": 15, "read": 15, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "15"}
+{"id": "easy-0016", "category": "add", "expression": "6 + 22", "value": 28, "read": 28, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "28"}
+{"id": "easy-0017", "category": "add", "expression": "21 + 27", "value": 48, "read": 48, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "48"}
+{"id": "easy-0018", "category": "add", "expression": "32 + 25", "value": 57, "read": 57, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "57"}
+{"id": "easy-0019", "category": "add", "expression": "34 + 6", "value": 40, "read": 40, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "40"}
+{"id": "easy-0020", "category": "add", "expression": "50 + 18", "value": 68, "read": 68, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "68"}
+{"id": "easy-0021", "category": "add", "expression": "8 + 13", "value": 21, "read": 21, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "21"}
+{"id": "easy-0022", "category": "add", "expression": "59 + 11", "value": 70, "read": 69, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "69"}
+{"id": "easy-0023", "category": "add", "expression": "48 + 29", "value": 77, "read": 77, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "77"}
+{"id": "easy-0024", "category": "sub", "expression": "65 - 17", "value": 48, "read": 48, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "48"}
+{"id": "easy-0025", "category": "sub", "expression": "45 - 15", "value": 30, "read": 30, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "30"}
+{"id": "easy-0026", "category": "sub", "expression": "21 - 4", "value": 17, "read": 17, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "17"}
+{"id": "easy-0027", "category": "sub", "expression": "20 - 8", "value": 12, "read": 12, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "12"}
+{"id": "easy-0028", "category": "sub", "expression": "11 - 6", "value": 5, "read": 5, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "5"}
+{"id": "easy-0029", "category": "sub", "expression": "58 - 14", "value": 44, "read": 42, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "42"}
+{"id": "easy-0030", "category": "sub", "expression": "51 - 22", "value": 29, "read": 29, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "29"}
+{"id": "easy-0031", "category": "sub", "expression": "57 - 14", "value": 43, "read": 43, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "43"}
+{"id": "easy-0032", "category": "sub", "expression": "42 - 6", "value": 36, "read": 36, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "36"}
+{"id": "easy-0033", "category": "sub", "expression": "22 - 12", "value": 10, "read": 10, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "10"}
+{"id": "easy-0034", "category": "sub", "expression": "47 - 26", "value": 21, "read": 19, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "19"}
+{"id": "easy-0035", "category": "sub", "expression": "47 - 9", "value": 38, "read": 38, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "38"}
+{"id": "easy-0036", "category": "sub", "expression": "65 - 27", "value": 38, "read": 38, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "38"}
+{"id": "easy-0037", "category": "sub", "expression": "46 - 25", "value": 21, "read": 21, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "21"}
+{"id": "easy-0038", "category": "sub", "expression": "33 - 14", "value": 19, "read": 19, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "19"}
+{"id": "easy-0039", "category": "sub", "expression": "42 - 23", "value": 19, "read": 19, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "19"}
+{"id": "easy-0040", "category": "sub", "expression": "59 - 29", "value": 30, "read": 30, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "30"}
+{"id": "easy-0041", "category": "sub", "expression": "55 - 19", "value": 36, "read": 26, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "26"}
+{"id": "easy-0042", "category": "sub", "expression": "25 - 3", "value": 22, "read": 22, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "22"}
+{"id": "easy-0043", "category": "sub", "expression": "68 - 25", "value": 43, "read": 43, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "43"}
+{"id": "easy-0044", "category": "sub", "expression": "24 - 14", "value": 10, "read": 10, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "10"}
+{"id": "easy-0045", "category": "sub", "expression": "35 - 18", "value": 17, "read": 17, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "17"}
+{"id": "easy-0046", "category": "sub", "expression": "66 - 22", "value": 44, "read": 44, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "44"}
+{"id": "easy-0047", "category": "sub", "expression": "74 - 28", "value": 46, "read": 46, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "46"}
+{"id": "easy-0048", "category": "mul", "expression": "12 * 7", "value": 84, "read": 84, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "84"}
+{"id": "easy-0049", "category": "mul", "expression": "2 * 2", "value": 4, "read": 4, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "4"}
+{"id": "easy-0050", "category": "mul", "expression": "10 * 4", "value": 40, "read": 40, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "40"}
+{"id": "easy-0051", "category": "mul", "expression": "2 * 6", "value": 12, "read": 12, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "12"}
+{"id": "easy-0052", "category": "mul", "expression": "11 * 7", "value": 77, "read": 77, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "77"}
+{"id": "easy-0053", "category": "mul", "expression": "4 * 2", "value": 8, "read": 8, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "8"}
+{"id": "easy-0054", "category": "mul", "expression": "10 * 10", "value": 100, "read": 100, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "100"}
+{"id": "easy-0055", "category": "mul", "expression": "11 * 2", "value": 22, "read": 22, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "22"}
+{"id": "easy-0056", "category": "mul", "expression": "4 * 9", "value": 36, "read": 36, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "36"}
+{"id": "easy-0057", "category": "mul", "expression": "7 * 12", "value": 84, "read": 84, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "84"}
+{"id": "easy-0058", "category": "mul", "expression": "10 * 2", "value": 20, "read": 20, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "20"}
+{"id": "easy-0059", "category": "mul", "expression": "2 * 3", "value": 6, "read": 6, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "6"}
+{"id": "easy-0060", "category": "mul", "expression": "3 * 9", "value": 27, "read": 27, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "27"}
+{"id": "easy-0061", "category": "mul", "expression": "6 * 9", "value": 54, "read": 54, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "54"}
+{"id": "easy-0062", "category": "mul", "expression": "10 * 6", "value": 60, "read": 60, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "60"}
+{"id": "easy-0063", "category": "mul", "expression": "4 * 8", "value": 32, "read": 32, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "32"}
+{"id": "easy-0064", "category": "mul", "expression": "7 * 3", "value": 21, "read": 21, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "21"}
+{"id": "easy-0065", "category": "mul", "expression": "3 * 5", "value": 15, "read": 15, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "15"}
+{"id": "easy-0066", "category": "mul", "expression": "4 * 12", "value": 48, "read": 48, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "48"}
+{"id": "easy-0067", "category": "mul", "expression": "8 * 9", "value": 72, "read": 72, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "72"}
+{"id": "easy-0068", "category": "mul", "expression": "8 * 5", "value": 40, "read": 40, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "40"}
+{"id": "easy-0069", "category": "mul", "expression": "7 * 2", "value": 14, "read": 14, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "14"}
+{"id": "easy-0070", "category": "mul", "expression": "9 * 2", "value": 18, "read": 18, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "18"}
+{"id": "easy-0071", "category": "mul", "expression": "10 * 3", "value": 30, "read": 30, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "30"}
+{"id": "easy-0072", "category": "div", "expression": "10 / 2", "value": 5, "read": 5, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "5"}
+{"id": "easy-0073", "category": "div", "expression": "24 / 3", "value": 8, "read": 8, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "8"}
+{"id": "easy-0074", "category": "div", "expression": "84 / 7", "value": 12, "read": 12, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "12"}
+{"id": "easy-0075", "category": "div", "expression": "24 / 2", "value": 12, "read": 12, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "12"}
+{"id": "easy-0076", "category": "div", "expression": "32 / 4", "value": 8, "read": 8, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "8"}
+{"id": "easy-0077", "category": "div", "expression": "48 / 6", "value": 8, "read": 8, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "8"}
+{"id": "easy-0078", "category": "div", "expression": "60 / 10", "value": 6, "read": 6, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "6"}
+{"id": "easy-0079", "category": "div", "expression": "24 / 6", "value": 4, "read": 4, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "4"}
+{"id": "easy-0080", "category": "div", "expression": "110 / 10", "value": 11, "read": 10, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "10"}
+{"id": "easy-0081", "category": "div", "expression": "88 / 8", "value": 11, "read": 11, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "11"}
+{"id": "easy-0082", "category": "div", "expression": "35 / 5", "value": 7, "read": 7, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "7"}
+{"id": "easy-0083", "category": "div", "expression": "72 / 8", "value": 9, "read": 9, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "9"}
+{"id": "easy-0084", "category": "div", "expression": "42 / 6", "value": 7, "read": 7, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "7"}
+{"id": "easy-0085", "category": "div", "expression": "24 / 4", "value": 6, "read": 6, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "6"}
+{"id": "easy-0086", "category": "div", "expression": "54 / 6", "value": 9, "read": 9, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "9"}
+{"id": "easy-0087", "category": "div", "expression": "16 / 2", "value": 8, "read": 8, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "8"}
+{"id": "easy-0088", "category": "div", "expression": "18 / 2", "value": 9, "read": 9, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "9"}
+{"id": "easy-0089", "category": "div", "expression": "72 / 6", "value": 12, "read": 12, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "12"}
+{"id": "easy-0090", "category": "div", "expression": "40 / 10", "value": 4, "read": 4, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "4"}
+{"id": "easy-0091", "category": "div", "expression": "40 / 4", "value": 10, "read": 10, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "10"}
+{"id": "easy-0092", "category": "div", "expression": "36 / 3", "value": 12, "read": 12, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "12"}
+{"id": "easy-0093", "category": "div", "expression": "54 / 9", "value": 6, "read": 6, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "6"}
+{"id": "easy-0094", "category": "div", "expression": "100 / 10", "value": 10, "read": 10, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "10"}
+{"id": "easy-0095", "category": "div", "expression": "25 / 5", "value": 5, "read": 5, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "5"}
+{"id": "easy-0096", "category": "pow", "expression": "3 ** 3", "value": 27, "read": 27, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "27"}
+{"id": "easy-0097", "category": "pow", "expression": "3 ** 2", "value": 9, "read": 9, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "9"}
+{"id": "easy-0098", "category": "pow", "expression": "5 ** 2", "value": 25, "read": 25, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "25"}
+{"id": "easy-0099", "category": "pow", "expression": "2 ** 3", "value": 8, "read": 8, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "8"}
+{"id": "easy-0100", "category": "pow", "expression": "2 ** 4", "value": 16, "read": 16, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "16"}
+{"id": "easy-0101", "category": "pow", "expression": "11 ** 2", "value": 121, "read": 121, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "121"}
+{"id": "easy-0102", "category": "pow", "expression": "2 ** 2", "value": 4, "read": 4, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "4"}
+{"id": "easy-0103", "category": "pow", "expression": "6 ** 3", "value": 216, "read": 18, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "18"}
+{"id": "easy-0104", "category": "pow", "expression": "6 ** 2", "value": 36, "read": 36, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "36"}
+{"id": "easy-0105", "category": "pow", "expression": "8 ** 2", "value": 64, "read": 16, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "16"}
+{"id": "easy-0106", "category": "pow", "expression": "2 ** 8", "value": 256, "read": 256, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "256"}
+{"id": "easy-0107", "category": "pow", "expression": "2 ** 6", "value": 64, "read": 64, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "64"}
+{"id": "easy-0108", "category": "pow", "expression": "10 ** 2", "value": 100, "read": 100, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "100"}
+{"id": "easy-0109", "category": "pow", "expression": "2 ** 5", "value": 32, "read": 32, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "32"}
+{"id": "easy-0110", "category": "pow", "expression": "2 ** 7", "value": 128, "read": 128, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "128"}
+{"id": "easy-0111", "category": "pow", "expression": "5 ** 3", "value": 125, "read": 125, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "125"}
+{"id": "easy-0112", "category": "pow", "expression": "4 ** 2", "value": 16, "read": 16, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "16"}
+{"id": "easy-0113", "category": "pow", "expression": "3 ** 4", "value": 81, "read": 81, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "81"}
+{"id": "easy-0114", "category": "pow", "expression": "10 ** 4", "value": 10000, "read": 10000, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 3, "reply": "10000"}
+{"id": "easy-0115", "category": "pow", "expression": "7 ** 2", "value": 49, "read": 49, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "49"}
+{"id": "easy-0116", "category": "pow", "expression": "10 ** 3", "value": 1000, "read": 1000, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 3, "reply": "1000"}
+{"id": "easy-0117", "category": "pow", "expression": "9 ** 2", "value": 81, "read": 81, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "81"}
+{"id": "easy-0118", "category": "pow", "expression": "4 ** 3", "value": 64, "read": 64, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "64"}
+{"id": "easy-0119", "category": "pow", "expression": "12 ** 2", "value": 144, "read": 144, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "144"}
+{"id": "easy-0120", "category": "mixed", "expression": "16 + 6 * 7", "value": 58, "read": 16, "read_by": "first_number", "correct": false, "number_only_reply": false, "n_new_tokens": 16, "reply": "The value of the expression 16 + 6 * 7 is 62"}
+{"id": "easy-0121", "category": "mixed", "expression": "19 + 5 * 2", "value": 29, "read": 29, "read_by": "after_equals", "correct": true, "number_only_reply": false, "n_new_tokens": 16, "reply": "19 + 5 * 2 = 19 + 10 = 29"}
+{"id": "easy-0122", "category": "mixed", "expression": "2 + 5 * 9", "value": 47, "read": 17, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "17"}
+{"id": "easy-0123", "category": "mixed", "expression": "4 + 6 * 5", "value": 34, "read": 26, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "26"}
+{"id": "easy-0124", "category": "mixed", "expression": "9 + 9 * 2", "value": 27, "read": 27, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "27"}
+{"id": "easy-0125", "category": "mixed", "expression": "13 + 8 * 5", "value": 53, "read": 41, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "41"}
+{"id": "easy-0126", "category": "mixed", "expression": "8 + 9 * 5", "value": 53, "read": 43, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "43"}
+{"id": "easy-0127", "category": "mixed", "expression": "16 + 5 * 6", "value": 46, "read": 26, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "26"}
+{"id": "easy-0128", "category": "mixed", "expression": "7 + 5 * 9", "value": 52, "read": 7, "read_by": "first_number", "correct": false, "number_only_reply": false, "n_new_tokens": 16, "reply": "The value of the expression 7 + 5 * 9 is 52"}
+{"id": "easy-0129", "category": "mixed", "expression": "6 + 8 * 2", "value": 22, "read": 14, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "14"}
+{"id": "easy-0130", "category": "mixed", "expression": "15 + 2 * 2", "value": 19, "read": 19, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "19"}
+{"id": "easy-0131", "category": "mixed", "expression": "12 + 3 * 3", "value": 21, "read": 15, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "15"}
+{"id": "easy-0132", "category": "mixed", "expression": "7 + 9 * 2", "value": 25, "read": 7, "read_by": "first_number", "correct": false, "number_only_reply": false, "n_new_tokens": 16, "reply": "The value of the expression 7 + 9 * 2 is 25"}
+{"id": "easy-0133", "category": "mixed", "expression": "12 + 9 * 4", "value": 48, "read": 36, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "36"}
+{"id": "easy-0134", "category": "mixed", "expression": "10 + 3 * 7", "value": 31, "read": 31, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "31"}
+{"id": "easy-0135", "category": "mixed", "expression": "14 + 7 * 6", "value": 56, "read": 98, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "98"}
+{"id": "easy-0136", "category": "mixed", "expression": "17 + 5 * 7", "value": 52, "read": 17, "read_by": "first_number", "correct": false, "number_only_reply": false, "n_new_tokens": 16, "reply": "The value of the expression 17 + 5 * 7 is 52"}
+{"id": "easy-0137", "category": "mixed", "expression": "12 + 7 * 9", "value": 75, "read": 81, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "81"}
+{"id": "easy-0138", "category": "mixed", "expression": "14 + 2 * 8", "value": 30, "read": 18, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "18"}
+{"id": "easy-0139", "category": "mixed", "expression": "3 + 6 * 5", "value": 33, "read": 3, "read_by": "first_number", "correct": false, "number_only_reply": false, "n_new_tokens": 16, "reply": "The value of the expression 3 + 6 * 5 is 33"}
+{"id": "easy-0140", "category": "mixed", "expression": "13 + 6 * 7", "value": 55, "read": 91, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "91"}
+{"id": "easy-0141", "category": "mixed", "expression": "10 + 6 * 2", "value": 22, "read": 18, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "18"}
+{"id": "easy-0142", "category": "mixed", "expression": "2 + 5 * 3", "value": 17, "read": 11, "read_by": "first_number", "correct": false, "number_only_reply": true, "n_new_tokens": 2, "reply": "11"}
+{"id": "easy-0143", "category": "mixed", "expression": "10 + 8 * 9", "value": 82, "read": 82, "read_by": "first_number", "correct": true, "number_only_reply": true, "n_new_tokens": 2, "reply": "82"}

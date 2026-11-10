@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "experiment": "baseline_letter_logprobs",
+    "model_key": "phi-4-mini-instruct",
+    "model": "microsoft/Phi-4-mini-instruct",
+    "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+    "dtype": "float16",
+    "device": "cuda",
+    "prompt_version": "v1",
+    "prompt_format": "chat",
+    "answer_prefix": null,
+    "system": null,
+    "template_kwargs": null,
+    "system_in_user_turn": false,
+    "load_kwargs": null,
+    "raw_suffix": null,
+    "letter_tokens": {
+      "A": [
+        "A",
+        32
+      ],
+      "B": [
+        "B",
+        33
+      ],
+      "C": [
+        "C",
+        34
+      ]
+    },
+    "letter_tokens_alt": {
+      "A": [
+        " A",
+        355
+      ],
+      "B": [
+        " B",
+        418
+      ],
+      "C": [
+        " C",
+        363
+      ]
+    },
+    "example_input": "<|user|>Compute the value of the expression below and choose the correct result.\n\nExpression: 17 + 40\n\nOptions:\nA) 58\nB) 62\nC) 57\nAnswer with the letter of the correct option only.<|end|><|assistant|>",
+    "split": "test",
+    "data": "easy_mcq/easy_mcq_test.jsonl",
+    "n_items": 144,
+    "limit": null,
+    "batch_size": 8,
+    "seed": 0,
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "python": "3.13.16",
+    "gpu": "Tesla T4",
+    "utc": "2026-11-02T19:36:17+00:00"
+  },
+  "accuracy": 0.6042,
+  "report": {
+    "all": {
+      "acc": 0.6042,
+      "n": 144
+    },
+    "category=add": {
+      "acc": 0.3333,
+      "n": 24
+    },
+    "category=div": {
+      "acc": 0.7083,
+      "n": 24
+    },
+    "category=mixed": {
+      "acc": 0.4167,
+      "n": 24
+    },
+    "category=mul": {
+      "acc": 0.9167,
+      "n": 24
+    },
+    "category=pow": {
+      "acc": 0.875,
+      "n": 24
+    },
+    "category=sub": {
+      "acc": 0.375,
+      "n": 24
+    },
+    "ode_type=add": {
+      "acc": 0.3333,
+      "n": 24
+    },
+    "ode_type=div": {
+      "acc": 0.7083,
+      "n": 24
+    },
+    "ode_type=mixed": {
+      "acc": 0.4167,
+      "n": 24
+    },
+    "ode_type=mul": {
+      "acc": 0.9167,
+      "n": 24
+    },
+    "ode_type=pow": {
+      "acc": 0.875,
+      "n": 24
+    },
+    "ode_type=sub": {
+      "acc": 0.375,
+      "n": 24
+    },
+    "order=1": {
+      "acc": 0.6417,
+      "n": 120
+    },
+    "order=2": {
+      "acc": 0.4167,
+      "n": 24
+    },
+    "subtype=E:add": {
+      "acc": 0.3333,
+      "n": 24
+    },
+    "subtype=E:div": {
+      "acc": 0.7083,
+      "n": 24
+    },
+    "subtype=E:mixed": {
+      "acc": 0.4167,
+      "n": 24
+    },
+    "subtype=E:mul": {
+      "acc": 0.9167,
+      "n": 24
+    },
+    "subtype=E:pow": {
+      "acc": 0.875,
+      "n": 24
+    },
+    "subtype=E:sub": {
+      "acc": 0.375,
+      "n": 24
+    },
+    "variant=E": {
+      "acc": 0.6042,
+      "n": 144
+    }
+  },
+  "pred_letter_counts": {
+    "A": 80,
+    "B": 43,
+    "C": 21
+  },
+  "gold_letter_counts": {
+    "C": 48,
+    "A": 48,
+    "B": 48
+  },
+  "confusion_gold_to_pred": {
+    "A": {
+      "A": 42,
+      "B": 6
+    },
+    "B": {
+      "A": 18,
+      "B": 27,
+      "C": 3
+    },
+    "C": {
+      "A": 20,
+      "B": 10,
+      "C": 18
+    }
+  },
+  "n_correct": 87,
+  "n_wrong": 57,
+  "mean_letter_mass": 0.9731947913432804,
+  "frac_top1_is_letter": 1.0,
+  "accuracy_alt_form": 0.6041666666666666,
+  "agreement_main_vs_alt_form": 0.8958333333333334
+}

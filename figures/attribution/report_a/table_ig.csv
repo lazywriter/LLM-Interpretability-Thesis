@@ -1,0 +1,4 @@
+model,IG steps,"median completeness gap, pad","median completeness gap, zero",pad vs zero: rank corr. of fields (median),pad vs zero: same top field
+Qwen3-4B,32,31%,99%,0.14,26% (chance 16%)
+Qwen2.5-Math-1.5B,32,10%,441%,0.25,31% (chance 16%)
+Phi-4-mini,32,30%,60%,0.37,27% (chance 16%)

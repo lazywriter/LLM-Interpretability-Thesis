@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "experiment": "open_arithmetic",
+    "model_key": "qwen2.5-3b-instruct",
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "mode": "number",
+    "system": null,
+    "template_kwargs": null,
+    "dtype": "float16",
+    "device": "cuda",
+    "greedy": true,
+    "max_new_tokens": 16,
+    "example_input": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nCompute the value of the expression below.\n\nExpression: 17 + 40\n\nAnswer with the number only.<|im_end|>\n<|im_start|>assistant\n",
+    "data": "easy_open/easy_open_test.jsonl",
+    "n_items": 144,
+    "limit": null,
+    "seed": 0,
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "python": "3.13.16",
+    "gpu": "Tesla T4",
+    "utc": "2026-11-02T20:00:17+00:00"
+  },
+  "accuracy": 0.9236111111111112,
+  "per_category": {
+    "add": {
+      "acc": 1.0,
+      "n": 24
+    },
+    "div": {
+      "acc": 1.0,
+      "n": 24
+    },
+    "mixed": {
+      "acc": 0.5416666666666666,
+      "n": 24
+    },
+    "mul": {
+      "acc": 1.0,
+      "n": 24
+    },
+    "pow": {
+      "acc": 1.0,
+      "n": 24
+    },
+    "sub": {
+      "acc": 1.0,
+      "n": 24
+    }
+  },
+  "no_number_found": 0,
+  "number_only_replies": 144,
+  "read_by": {
+    "first_number": 144
+  },
+  "mean_new_tokens": 2.9305555555555554,
+  "wrong_examples": [
+    {
+      "expression": "16 + 6 * 7",
+      "value": 58,
+      "read": 50,
+      "reply": "50"
+    },
+    {
+      "expression": "13 + 8 * 5",
+      "value": 53,
+      "read": 43,
+      "reply": "43"
+    },
+    {
+      "expression": "8 + 9 * 5",
+      "value": 53,
+      "read": 43,
+      "reply": "43"
+    },
+    {
+      "expression": "15 + 2 * 2",
+      "value": 19,
+      "read": 23,
+      "reply": "23"
+    },
+    {
+      "expression": "12 + 3 * 3",
+      "value": 21,
+      "read": 15,
+      "reply": "15"
+    },
+    {
+      "expression": "10 + 3 * 7",
+      "value": 31,
+      "read": 21,
+      "reply": "21"
+    },
+    {
+      "expression": "14 + 7 * 6",
+      "value": 56,
+      "read": 55,
+      "reply": "55"
+    },
+    {
+      "expression": "17 + 5 * 7",
+      "value": 52,
+      "read": 42,
+      "reply": "42"
+    },
+    {
+      "expression": "12 + 7 * 9",
+      "value": 75,
+      "read": 63,
+      "reply": "63"
+    },
+    {
+      "expression": "14 + 2 * 8",
+      "value": 30,
+      "read": 26,
+      "reply": "26"
+    },
+    {
+      "expression": "10 + 8 * 9",
+      "value": 82,
+      "read": 72,
+      "reply": "72"
+    }
+  ]
+}

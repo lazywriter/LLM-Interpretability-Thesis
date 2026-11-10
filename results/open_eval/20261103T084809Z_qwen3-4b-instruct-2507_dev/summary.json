@@ -1,0 +1,174 @@
+{
+  "meta": {
+    "experiment": "open_eval",
+    "model_key": "qwen3-4b-instruct-2507",
+    "model": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "prompt_version": "open-v1",
+    "prompt_format": "chat",
+    "raw_suffix": null,
+    "system": null,
+    "template_kwargs": null,
+    "thinking": false,
+    "example_input": "<|im_start|>user\nSolve the initial value problem below.\n\nDifferential equation: y' = 2*exp(x)\nConditions:\n1. y(0) = -2\n\nShow your working, then finish with a final line of the form \"Answer: y = <expression>\", writing the expression in plain text (for example: y = 3*exp(2*x) - x^2).<|im_end|>\n<|im_start|>assistant\n",
+    "dtype": "float16",
+    "device": "cuda",
+    "greedy": true,
+    "max_new_tokens": 768,
+    "batch_size": 8,
+    "data": "ivp_open/ivp_open_dev.jsonl",
+    "split": "dev",
+    "subtypes": null,
+    "n_items": 72,
+    "limit": null,
+    "seed": 0,
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "python": "3.13.16",
+    "gpu": "Tesla T4",
+    "seconds": 547,
+    "utc": "2026-11-03T08:57:16+00:00"
+  },
+  "accuracy": 0.5833,
+  "report": {
+    "all": {
+      "acc": 0.5833,
+      "n": 72
+    },
+    "category=direct2_exp": {
+      "acc": 1.0,
+      "n": 4
+    },
+    "category=direct2_power": {
+      "acc": 0.75,
+      "n": 4
+    },
+    "category=direct2_trig": {
+      "acc": 0.75,
+      "n": 4
+    },
+    "category=direct_exp": {
+      "acc": 1.0,
+      "n": 4
+    },
+    "category=direct_power": {
+      "acc": 1.0,
+      "n": 4
+    },
+    "category=direct_trig": {
+      "acc": 0.75,
+      "n": 4
+    },
+    "category=hom_complex": {
+      "acc": 0.5,
+      "n": 4
+    },
+    "category=hom_real_distinct": {
+      "acc": 0.25,
+      "n": 4
+    },
+    "category=hom_repeated": {
+      "acc": 0.0,
+      "n": 4
+    },
+    "category=linear_const_forcing": {
+      "acc": 1.0,
+      "n": 4
+    },
+    "category=linear_exp_forcing": {
+      "acc": 0.5,
+      "n": 4
+    },
+    "category=linear_poly_forcing": {
+      "acc": 0.25,
+      "n": 4
+    },
+    "category=nonhom_complex": {
+      "acc": 0.25,
+      "n": 4
+    },
+    "category=nonhom_real_distinct": {
+      "acc": 0.0,
+      "n": 4
+    },
+    "category=nonhom_repeated": {
+      "acc": 0.0,
+      "n": 4
+    },
+    "category=separable_exponential": {
+      "acc": 1.0,
+      "n": 4
+    },
+    "category=separable_xy": {
+      "acc": 0.5,
+      "n": 4
+    },
+    "category=separable_y_over_x": {
+      "acc": 1.0,
+      "n": 4
+    },
+    "ode_type=first_order_direct": {
+      "acc": 0.9167,
+      "n": 12
+    },
+    "ode_type=first_order_linear": {
+      "acc": 0.5833,
+      "n": 12
+    },
+    "ode_type=first_order_separable": {
+      "acc": 0.8333,
+      "n": 12
+    },
+    "ode_type=second_order_direct": {
+      "acc": 0.8333,
+      "n": 12
+    },
+    "ode_type=second_order_homogeneous": {
+      "acc": 0.25,
+      "n": 12
+    },
+    "ode_type=second_order_nonhomogeneous": {
+      "acc": 0.0833,
+      "n": 12
+    },
+    "order=1": {
+      "acc": 0.7778,
+      "n": 36
+    },
+    "order=2": {
+      "acc": 0.3889,
+      "n": 36
+    },
+    "subtype=duplicate": {
+      "acc": 0.6111,
+      "n": 18
+    },
+    "subtype=none": {
+      "acc": 0.6111,
+      "n": 18
+    },
+    "subtype=rescaled": {
+      "acc": 0.6667,
+      "n": 18
+    },
+    "subtype=unrelated": {
+      "acc": 0.4444,
+      "n": 18
+    },
+    "answer_status": {
+      "ok": 44,
+      "parse_error": 8,
+      "free_symbols": 20
+    },
+    "unrelated: answer satisfies z-condition read as y": 0.0,
+    "unrelated: answer equals the trap solution": 0.0
+  },
+  "truncated": 32,
+  "mean_new_tokens": 640.1111111111111,
+  "answer_found_by": {
+    "answer_line": 42,
+    "last_y_line": 30
+  },
+  "wrong_but_solves_ode": 1,
+  "wrong_but_satisfies_some_condition": 2
+}

@@ -1,0 +1,241 @@
+{
+  "meta": {
+    "experiment": "baseline_letter_logprobs",
+    "model_key": "phi-4-mini-instruct",
+    "model": "microsoft/Phi-4-mini-instruct",
+    "revision": null,
+    "dtype": "float16",
+    "device": "cuda",
+    "prompt_version": "v1+sys",
+    "prompt_format": "chat",
+    "answer_prefix": null,
+    "system": "You answer multiple-choice questions. Reply with exactly one letter (A, B or C) and nothing else. Do not explain or show any working.",
+    "template_kwargs": null,
+    "system_in_user_turn": false,
+    "load_kwargs": null,
+    "raw_suffix": null,
+    "letter_tokens": {
+      "A": [
+        "A",
+        32
+      ],
+      "B": [
+        "B",
+        33
+      ],
+      "C": [
+        "C",
+        34
+      ]
+    },
+    "letter_tokens_alt": {
+      "A": [
+        " A",
+        355
+      ],
+      "B": [
+        " B",
+        418
+      ],
+      "C": [
+        " C",
+        363
+      ]
+    },
+    "example_input": "<|system|>You answer multiple-choice questions. Reply with exactly one letter (A, B or C) and nothing else. Do not explain or show any working.<|end|><|user|>Solve the initial value problem below and choose the correct solution.\n\nDifferential equation: y' = 2*exp(2*x)\nConditions:\n1. y(1) = -4 + exp(2)\n2. -2*y(1) = 8 - 2*exp(2)\n\nOptions:\nA) y = exp(2*x) + 2\nB) y = exp(2*x) - 4\nC) y = exp(2*x) + 5\nAnswer with the letter of the correct option only.<|end|><|assistant|>",
+    "split": "test",
+    "n_items": 792,
+    "limit": null,
+    "batch_size": 8,
+    "seed": 0,
+    "torch": "2.11.0+cu130",
+    "transformers": "5.21.0",
+    "python": "3.13.16",
+    "gpu": "Tesla T4",
+    "utc": "2026-11-02T11:44:26+00:00"
+  },
+  "accuracy": 0.4571,
+  "report": {
+    "all": {
+      "acc": 0.4571,
+      "n": 792
+    },
+    "category=direct2_exp": {
+      "acc": 0.3864,
+      "n": 44
+    },
+    "category=direct2_power": {
+      "acc": 0.3182,
+      "n": 44
+    },
+    "category=direct2_trig": {
+      "acc": 0.3636,
+      "n": 44
+    },
+    "category=direct_exp": {
+      "acc": 0.6136,
+      "n": 44
+    },
+    "category=direct_power": {
+      "acc": 0.3636,
+      "n": 44
+    },
+    "category=direct_trig": {
+      "acc": 0.4773,
+      "n": 44
+    },
+    "category=hom_complex": {
+      "acc": 0.3864,
+      "n": 44
+    },
+    "category=hom_real_distinct": {
+      "acc": 0.4773,
+      "n": 44
+    },
+    "category=hom_repeated": {
+      "acc": 0.4091,
+      "n": 44
+    },
+    "category=linear_const_forcing": {
+      "acc": 0.4773,
+      "n": 44
+    },
+    "category=linear_exp_forcing": {
+      "acc": 0.4091,
+      "n": 44
+    },
+    "category=linear_poly_forcing": {
+      "acc": 0.5455,
+      "n": 44
+    },
+    "category=nonhom_complex": {
+      "acc": 0.4091,
+      "n": 44
+    },
+    "category=nonhom_real_distinct": {
+      "acc": 0.4545,
+      "n": 44
+    },
+    "category=nonhom_repeated": {
+      "acc": 0.4545,
+      "n": 44
+    },
+    "category=separable_exponential": {
+      "acc": 0.5227,
+      "n": 44
+    },
+    "category=separable_xy": {
+      "acc": 0.5455,
+      "n": 44
+    },
+    "category=separable_y_over_x": {
+      "acc": 0.6136,
+      "n": 44
+    },
+    "ode_type=first_order_direct": {
+      "acc": 0.4848,
+      "n": 132
+    },
+    "ode_type=first_order_linear": {
+      "acc": 0.4773,
+      "n": 132
+    },
+    "ode_type=first_order_separable": {
+      "acc": 0.5606,
+      "n": 132
+    },
+    "ode_type=second_order_direct": {
+      "acc": 0.3561,
+      "n": 132
+    },
+    "ode_type=second_order_homogeneous": {
+      "acc": 0.4242,
+      "n": 132
+    },
+    "ode_type=second_order_nonhomogeneous": {
+      "acc": 0.4394,
+      "n": 132
+    },
+    "order=1": {
+      "acc": 0.5076,
+      "n": 396
+    },
+    "order=2": {
+      "acc": 0.4066,
+      "n": 396
+    },
+    "subtype=B:duplicate": {
+      "acc": 0.4436,
+      "n": 133
+    },
+    "subtype=B:rescaled": {
+      "acc": 0.5496,
+      "n": 131
+    },
+    "subtype=B:unrelated": {
+      "acc": 0.447,
+      "n": 132
+    },
+    "subtype=C:extra1_direct": {
+      "acc": 0.34,
+      "n": 100
+    },
+    "subtype=C:extra1_indirect": {
+      "acc": 0.48,
+      "n": 100
+    },
+    "subtype=C:extra2_direct": {
+      "acc": 0.4242,
+      "n": 99
+    },
+    "subtype=C:extra2_indirect": {
+      "acc": 0.4948,
+      "n": 97
+    },
+    "variant=B": {
+      "acc": 0.4798,
+      "n": 396
+    },
+    "variant=C": {
+      "acc": 0.4343,
+      "n": 396
+    },
+    "B:unrelated trap-pick rate": {
+      "rate": 0.3409,
+      "n": 132
+    }
+  },
+  "pred_letter_counts": {
+    "B": 246,
+    "C": 336,
+    "A": 210
+  },
+  "gold_letter_counts": {
+    "B": 263,
+    "C": 270,
+    "A": 259
+  },
+  "confusion_gold_to_pred": {
+    "A": {
+      "C": 86,
+      "A": 96,
+      "B": 77
+    },
+    "B": {
+      "B": 111,
+      "C": 95,
+      "A": 57
+    },
+    "C": {
+      "C": 155,
+      "B": 58,
+      "A": 57
+    }
+  },
+  "n_correct": 362,
+  "n_wrong": 430,
+  "mean_letter_mass": 0.9987656225672291,
+  "frac_top1_is_letter": 1.0,
+  "accuracy_alt_form": 0.4128787878787879,
+  "agreement_main_vs_alt_form": 0.5795454545454546
+}

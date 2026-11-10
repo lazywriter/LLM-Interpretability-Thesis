@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "experiment": "baseline_letter_logprobs",
+    "model_key": "qwen3-1.7b",
+    "model": "Qwen/Qwen3-1.7B",
+    "revision": null,
+    "dtype": "float16",
+    "device": "cuda",
+    "prompt_version": "v1",
+    "prompt_format": "chat",
+    "answer_prefix": null,
+    "system": null,
+    "template_kwargs": {
+      "enable_thinking": false
+    },
+    "raw_suffix": null,
+    "letter_tokens": {
+      "A": [
+        "A",
+        32
+      ],
+      "B": [
+        "B",
+        33
+      ],
+      "C": [
+        "C",
+        34
+      ]
+    },
+    "letter_tokens_alt": {
+      "A": [
+        " A",
+        362
+      ],
+      "B": [
+        " B",
+        425
+      ],
+      "C": [
+        " C",
+        356
+      ]
+    },
+    "example_input": "<|im_start|>user\nSolve the initial value problem below and choose the correct solution.\n\nDifferential equation: y' = -exp(x)\nConditions:\n1. y(1) = -4 - exp(1)\n2. z(1) = -exp(1) - 1\n\nOptions:\nA) y = -exp(x) - 4\nB) y = -exp(x) - 1\nC) y = 1 - exp(x)\nAnswer with the letter of the correct option only.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "split": "dev",
+    "n_items": 72,
+    "limit": null,
+    "batch_size": 8,
+    "seed": 0,
+    "torch": "2.11.0+cu130",
+    "transformers": "5.21.0",
+    "python": "3.13.16",
+    "gpu": "Tesla T4",
+    "utc": "2026-11-02T10:40:38+00:00"
+  },
+  "accuracy": 0.4306,
+  "report": {
+    "all": {
+      "acc": 0.4306,
+      "n": 72
+    },
+    "category=direct2_exp": {
+      "acc": 0.25,
+      "n": 4
+    },
+    "category=direct2_power": {
+      "acc": 0.5,
+      "n": 4
+    },
+    "category=direct2_trig": {
+      "acc": 0.25,
+      "n": 4
+    },
+    "category=direct_exp": {
+      "acc": 1.0,
+      "n": 4
+    },
+    "category=direct_power": {
+      "acc": 0.25,
+      "n": 4
+    },
+    "category=direct_trig": {
+      "acc": 0.5,
+      "n": 4
+    },
+    "category=hom_complex": {
+      "acc": 0.5,
+      "n": 4
+    },
+    "category=hom_real_distinct": {
+      "acc": 0.25,
+      "n": 4
+    },
+    "category=hom_repeated": {
+      "acc": 0.5,
+      "n": 4
+    },
+    "category=linear_const_forcing": {
+      "acc": 0.75,
+      "n": 4
+    },
+    "category=linear_exp_forcing": {
+      "acc": 0.75,
+      "n": 4
+    },
+    "category=linear_poly_forcing": {
+      "acc": 0.5,
+      "n": 4
+    },
+    "category=nonhom_complex": {
+      "acc": 0.0,
+      "n": 4
+    },
+    "category=nonhom_real_distinct": {
+      "acc": 0.5,
+      "n": 4
+    },
+    "category=nonhom_repeated": {
+      "acc": 0.5,
+      "n": 4
+    },
+    "category=separable_exponential": {
+      "acc": 0.25,
+      "n": 4
+    },
+    "category=separable_xy": {
+      "acc": 0.25,
+      "n": 4
+    },
+    "category=separable_y_over_x": {
+      "acc": 0.25,
+      "n": 4
+    },
+    "ode_type=first_order_direct": {
+      "acc": 0.5833,
+      "n": 12
+    },
+    "ode_type=first_order_linear": {
+      "acc": 0.6667,
+      "n": 12
+    },
+    "ode_type=first_order_separable": {
+      "acc": 0.25,
+      "n": 12
+    },
+    "ode_type=second_order_direct": {
+      "acc": 0.3333,
+      "n": 12
+    },
+    "ode_type=second_order_homogeneous": {
+      "acc": 0.4167,
+      "n": 12
+    },
+    "ode_type=second_order_nonhomogeneous": {
+      "acc": 0.3333,
+      "n": 12
+    },
+    "order=1": {
+      "acc": 0.5,
+      "n": 36
+    },
+    "order=2": {
+      "acc": 0.3611,
+      "n": 36
+    },
+    "subtype=B:duplicate": {
+      "acc": 0.3636,
+      "n": 11
+    },
+    "subtype=B:rescaled": {
+      "acc": 0.4615,
+      "n": 13
+    },
+    "subtype=B:unrelated": {
+      "acc": 0.3333,
+      "n": 12
+    },
+    "subtype=C:extra1_direct": {
+      "acc": 0.25,
+      "n": 8
+    },
+    "subtype=C:extra1_indirect": {
+      "acc": 0.75,
+      "n": 8
+    },
+    "subtype=C:extra2_direct": {
+      "acc": 0.4444,
+      "n": 9
+    },
+    "subtype=C:extra2_indirect": {
+      "acc": 0.4545,
+      "n": 11
+    },
+    "variant=B": {
+      "acc": 0.3889,
+      "n": 36
+    },
+    "variant=C": {
+      "acc": 0.4722,
+      "n": 36
+    },
+    "B:unrelated trap-pick rate": {
+      "rate": 0.4167,
+      "n": 12
+    }
+  },
+  "pred_letter_counts": {
+    "A": 60,
+    "B": 12
+  },
+  "gold_letter_counts": {
+    "A": 29,
+    "C": 18,
+    "B": 25
+  },
+  "confusion_gold_to_pred": {
+    "A": {
+      "A": 25,
+      "B": 4
+    },
+    "B": {
+      "A": 19,
+      "B": 6
+    },
+    "C": {
+      "A": 16,
+      "B": 2
+    }
+  },
+  "n_correct": 31,
+  "n_wrong": 41,
+  "mean_letter_mass": 1.3225708908400737e-12,
+  "frac_top1_is_letter": 0.0,
+  "accuracy_alt_form": 0.4027777777777778,
+  "agreement_main_vs_alt_form": 0.8333333333333334
+}

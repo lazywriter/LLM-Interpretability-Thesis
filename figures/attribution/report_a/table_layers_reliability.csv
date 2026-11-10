@@ -1,0 +1,4 @@
+model,instruction,equation,useful condition(s),distractor condition,answer-format instruction
+Qwen3-4B,1.00,0.99,0.99,0.99,1.00
+Qwen2.5-Math-1.5B,1.00,0.99,0.98,0.97,0.99
+Phi-4-mini,1.00,0.98,0.99,0.99,0.99
