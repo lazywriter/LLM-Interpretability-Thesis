@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading Differential Equations</title>
+<meta name="description" content="How small open-source language models solve initial value problems: a symbolic benchmark with exact grading, accuracy of three 1.5–4B models, and where their attention goes.">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --surface: #ffffff;
+    --ink: #1d1d1b;
+    --muted: #5c5b56;
+    --faint: #8a8880;
+    --rule: #e4e1d9;
+    --accent: #1f5f8b;
+    --accent-soft: #e6eef4;
+    --code-bg: #f2f0ea;
+    --figure-bg: #fcfcfb;
+    --qwen3: #2a76d2;
+    --math: #ec6a35;
+    --phi: #1aa57a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #151514;
+      --surface: #1d1d1b;
+      --ink: #ecebe6;
+      --muted: #b3b1a9;
+      --faint: #8d8b84;
+      --rule: #34332f;
+      --accent: #7db4dd;
+      --accent-soft: #1f2b35;
+      --code-bg: #232320;
+      --figure-bg: #fcfcfb;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #151514;
+    --surface: #1d1d1b;
+    --ink: #ecebe6;
+    --muted: #b3b1a9;
+    --faint: #8d8b84;
+    --rule: #34332f;
+    --accent: #7db4dd;
+    --accent-soft: #1f2b35;
+    --code-bg: #232320;
+    --figure-bg: #fcfcfb;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.65 Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+  .wide { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+  header { padding: 64px 0 28px; border-bottom: 1px solid var(--rule); }
+  .eyebrow {
+    font: 600 12px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 0 0 14px;
+  }
+  h1 { font-size: clamp(30px, 5.2vw, 44px); line-height: 1.12; margin: 0 0 16px; font-weight: 700; letter-spacing: -.01em; }
+  .lede { font-size: 19px; color: var(--muted); margin: 0 0 18px; }
+  .byline { font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--faint); margin: 0; }
+
+  .stats {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+    margin: 32px 0 8px; border: 1px solid var(--rule); background: var(--surface); border-radius: 6px; overflow: hidden;
+  }
+  .stat { padding: 16px 16px 14px; border-right: 1px solid var(--rule); }
+  .stat:last-child { border-right: 0; }
+  .stat b { display: block; font: 700 26px/1.1 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .stat span { display: block; margin-top: 6px; font: 13px/1.35 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--muted); }
+
+  nav.toc { font: 14px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; margin: 24px 0 0; color: var(--muted); }
+  nav.toc a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--rule); margin-right: 14px; white-space: nowrap; }
+  nav.toc a:hover { color: var(--accent); border-color: var(--accent); }
+
+  section { padding: 40px 0 8px; }
+  h2 { font-size: 26px; line-height: 1.25; margin: 0 0 14px; }
+  h2 .num { color: var(--faint); font-weight: 400; margin-right: 6px; }
+  h3 { font: 600 17px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; margin: 30px 0 8px; }
+  p { margin: 0 0 14px; }
+  a { color: var(--accent); }
+  ul { padding-left: 22px; margin: 0 0 14px; }
+  li { margin-bottom: 6px; }
+  strong { font-weight: 700; }
+
+  pre.problem {
+    background: var(--code-bg); border: 1px solid var(--rule); border-radius: 6px;
+    padding: 14px 16px; margin: 6px 0 18px; overflow-x: auto;
+    font: 14px/1.55 ui-monospace, "Cascadia Mono", Consolas, Menlo, monospace; white-space: pre;
+  }
+  code { font: 0.88em ui-monospace, "Cascadia Mono", Consolas, Menlo, monospace; background: var(--code-bg); padding: 1px 4px; border-radius: 3px; }
+
+  figure { margin: 22px 0 26px; }
+  figure .plate {
+    background: var(--figure-bg); border: 1px solid var(--rule); border-radius: 6px; padding: 10px;
+  }
+  figure img { display: block; width: 100%; height: auto; }
+  figcaption { font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--muted); margin-top: 10px; }
+  figcaption b { color: var(--ink); }
+
+  .tablebox { overflow-x: auto; margin: 10px 0 20px; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); }
+  table { border-collapse: collapse; width: 100%; font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; font-variant-numeric: tabular-nums; }
+  th, td { padding: 9px 10px; text-align: right; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+  th:first-child, td:first-child { text-align: left; }
+  thead th { font-weight: 600; color: var(--muted); background: var(--code-bg); }
+  tbody tr:last-child td { border-bottom: 0; }
+  td .ci { color: var(--faint); }
+  .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 7px; vertical-align: 1px; }
+
+  .callout {
+    border-left: 3px solid var(--accent); background: var(--accent-soft);
+    padding: 12px 16px; border-radius: 0 6px 6px 0; margin: 18px 0;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .status { font: 600 12px/1 system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--accent); border: 1px solid var(--accent); border-radius: 99px; padding: 4px 9px; vertical-align: 4px; margin-left: 8px; }
+
+  dl.defs { margin: 0 0 14px; }
+  dl.defs dt { font: 600 15px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; margin-top: 12px; }
+  dl.defs dd { margin: 2px 0 0; color: var(--muted); }
+
+  footer { border-top: 1px solid var(--rule); margin-top: 48px; padding: 24px 0 56px; font: 14px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--faint); }
+
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    header { padding-top: 40px; }
+    .lede { font-size: 17px; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .stat:nth-child(2) { border-right: 0; }
+    .stat:nth-child(-n+2) { border-bottom: 1px solid var(--rule); }
+    .stat b { font-size: 22px; }
+    h2 { font-size: 22px; }
+    figure .plate { padding: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">LLM interpretability · thesis project</p>
+    <h1>How small language models read and solve differential equations</h1>
+    <p class="lede">A symbolic benchmark of initial value problems with exact SymPy grading, three open-source models of 1.5–4B parameters, and a layer-by-layer look at which parts of each problem the models attend to when they write their answer.</p>
+    <p class="byline">November 2026 · zero-shot, no fine-tuning · runs on free Kaggle T4 GPUs</p>
+
+    <div class="stats" role="list">
+      <div class="stat" role="listitem"><b>864</b><span>initial value problems, all independently verified</span></div>
+      <div class="stat" role="listitem"><b>89.5%</b><span>best accuracy (Qwen3-4B, 792 test problems)</span></div>
+      <div class="stat" role="listitem"><b>75–82%</b><span>of the answer's attention goes to the model's own working</span></div>
+      <div class="stat" role="listitem"><b>0.60–0.74×</b><span>attention to an irrelevant condition written after a useful one</span></div>
+    </div>
+
+    <nav class="toc" aria-label="Contents">
+      <a href="#question">Question</a>
+      <a href="#data">Problems</a>
+      <a href="#accuracy">Accuracy</a>
+      <a href="#attention">Attention</a>
+      <a href="#next">Representations</a>
+      <a href="#methods">Methods</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section id="question">
+  <div class="wrap">
+    <h2><span class="num">1</span>The question</h2>
+    <p>Differential equations make a clean test bed for interpretability: the inputs are short and symbolic, every problem has exactly one correct solution, and a computer algebra system can check any answer exactly. That makes it possible to ask not just <em>whether</em> a model is right, but <strong>how it reads the problem and where it goes wrong</strong>.</p>
+    <p>The study has two steps. First, a short <strong>attribution</strong> step: which parts of the problem text do the models attend to when they produce their final answer? Second, the main part, now in progress: <strong>representation analysis</strong> (linear probing, RSA, CKA) of what the models' hidden states encode, layer by layer.</p>
+  </div>
+</section>
+
+<section id="data">
+  <div class="wrap">
+    <h2><span class="num">2</span>The problems</h2>
+    <p>864 initial value problems, generated so that every label is exact: each problem is built from a known general solution and small integer constants, and an independent checker re-derives the solution from the problem text alone (864/864 pass).</p>
+    <ul>
+      <li><strong>18 categories</strong>: first-order direct integration, separable and linear equations; second-order direct integration; and second-order constant-coefficient equations with real distinct, repeated and complex roots, homogeneous and forced.</li>
+      <li><strong>4 subtypes</strong>, 216 problems each: a plain problem, or the plain problem plus one <strong>irrelevant condition</strong> — a verbatim duplicate, a rescaled copy (<code>2*y(0) = 4</code>), or a condition on a different function <code>z</code>. Its position among the conditions is balanced within every category.</li>
+      <li>Split: 72 problems for model selection, <strong>792 for reported results</strong>.</li>
+    </ul>
+    <p>The models get the problem as plain text, may show their working, and must end with a fixed final line:</p>
+<pre class="problem">Solve the initial value problem below.
+
+Differential equation: y'' = -3*exp(x)
+Conditions:
+1. z(0) = 0
+2. y(0) = -2
+3. y'(0) = 2
+
+Show your working, then finish with a final line of the form
+"Answer: y = &lt;expression&gt;", writing the expression in plain text.</pre>
+    <p>The final answer is parsed (plain text or LaTeX) and graded by numerical equivalence with the true solution in SymPy. The grader also records whether a wrong answer still solves the equation and which conditions it satisfies.</p>
+  </div>
+  <div class="wide">
+    <figure>
+      <div class="plate"><img src="figures/01_categories.png" alt="Eighteen small plots, one per problem category, each showing the true solution curve and the points where its conditions are set." loading="lazy" width="1777" height="2557"></div>
+      <figcaption><b>One problem from each of the 18 categories:</b> the true solution and the points where its conditions are given.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="accuracy">
+  <div class="wrap">
+    <h2><span class="num">3</span>Models and accuracy</h2>
+    <p>Eight open-source models were compared on the 72 selection problems; three were kept, covering two model families, one maths-specialised model and sizes from 1.5B to 4B. Test results on 792 problems (greedy decoding, up to 1536 new tokens; accuracy in % per subtype and equation order). Models: Qwen3-4B-Instruct-2507, Qwen2.5-Math-1.5B-Instruct, Phi-4-mini-instruct.</p>
+    <div class="tablebox">
+      <table>
+        <thead>
+          <tr><th>Model</th><th>Accuracy [95% CI]</th><th>Plain</th><th>Dupl.</th><th>Resc.</th><th>z-cond.</th><th>Order 1 / 2</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="dot" style="background:var(--qwen3)"></span>Qwen3-4B</td><td>89.5% <span class="ci">[87.2, 91.5]</span></td><td>95.5</td><td>95.5</td><td>97.0</td><td>70.2</td><td>97.2 / 81.8</td></tr>
+          <tr><td><span class="dot" style="background:var(--math)"></span>Qwen2.5-Math-1.5B</td><td>87.4% <span class="ci">[84.9, 89.5]</span></td><td>90.9</td><td>84.9</td><td>90.9</td><td>82.8</td><td>93.2 / 81.6</td></tr>
+          <tr><td><span class="dot" style="background:var(--phi)"></span>Phi-4-mini</td><td>77.0% <span class="ci">[74.0, 79.8]</span></td><td>70.2</td><td>83.8</td><td>81.3</td><td>72.7</td><td>86.6 / 67.4</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul>
+      <li><strong>Answer format matters more than expected.</strong> As three-option multiple choice, the same kind of problems gave 43.4% (Qwen2.5-3B) and 45.7% (Phi-4-mini), against a chance rate of 33.3%. On an easy-arithmetic control, multiple-choice letter scoring gave 70% / 62%, while open answers with working gave 100% / 100%: the failure was in matching a computed value to a letter, not in the arithmetic. The study therefore uses open answers with working.</li>
+      <li><strong>The z-condition is the hardest case for Qwen3-4B</strong> (70.2%). In all 71 of its replies that ran past the token limit on these problems, it treats the <code>z</code> condition as a typo for a <code>y</code> condition and keeps deliberating; none of its answers follow the misreading.</li>
+      <li><strong>Many wrong answers solve the equation but get the constants wrong:</strong> 111 for Phi-4-mini and 84 for Qwen2.5-Math, against 5 for Qwen3-4B.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="attention">
+  <div class="wrap">
+    <h2><span class="num">4</span>Where the attention goes</h2>
+    <p>For each model, the final answer expression is fed back after the model's own working (teacher forcing), and the attention from the answer tokens to every part of the problem text is measured: instruction, equation, each condition and the answer-format instruction. <strong>Attention density</strong> is a field's share of the attention divided by its share of the tokens, so 1× means "in proportion to its length". 144 test problems per model (2 per category and subtype); 129 / 143 / 143 had a finished answer.</p>
+
+    <h3>The model mostly reads its own working</h3>
+    <p>Of all attention from the answer tokens to the input, <strong>75% (Qwen3-4B), 82% (Qwen2.5-Math) and 79% (Phi-4-mini)</strong> goes to the model's own working rather than to the problem text. Within the problem text, the two general models give the instruction the most per token, while the maths model gives it the least (0.39×) and reads the equation and conditions roughly in proportion to their length.</p>
+  </div>
+  <div class="wide">
+    <figure>
+      <div class="plate"><img src="figures/1_where_attention_goes.png" alt="Two heatmaps of median attention density per field and model, for direct attention and for attention rollout." loading="lazy" width="1866" height="742"></div>
+      <figcaption><b>Median attention density per field.</b> Left: direct attention from the answer tokens. Right: attention rollout through all layers, which is known to over-weight the first tokens and is used only for total flow.</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <h3>Irrelevant conditions are discounted only when they come after a useful one</h3>
+    <p>Averaged over all positions, the models give the irrelevant condition less attention than the useful ones. Split by where it is written, the effect is entirely in one case:</p>
+    <ul>
+      <li><strong>Written after a useful condition:</strong> 0.52× (Qwen3-4B), 0.74× (Qwen2.5-Math), 0.75× (Phi-4-mini) the attention of a useful condition, all intervals below 1.</li>
+      <li><strong>Written first:</strong> 1.25×, 1.11×, 0.99× — not discounted.</li>
+      <li><strong>Control, two useful conditions and nothing irrelevant:</strong> the second gets as much as the first (1.15–1.41×, intervals include 1), so this is not a plain position effect.</li>
+      <li><strong>The same condition written twice:</strong> the second copy gets 0.55× / 0.62× / 0.75× the first.</li>
+    </ul>
+  </div>
+  <div class="wide">
+    <figure>
+      <div class="plate"><img src="figures/3_distractor_order.png" alt="Dot-and-interval chart of attention ratios for four comparisons and three models; the two lower rows lie left of 1x." loading="lazy" width="1491" height="737"></div>
+      <figcaption><b>Attention ratios by order</b> (median and 95% bootstrap CI; left of 1× = the condition named first in the row gets less).</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <p>A within-problem regression separates position from role (item fixed effects, 75–90 problems per model). Position alone has no effect (position 2 vs 1: 1.06–1.14×, intervals include 1). An irrelevant condition written after a useful one gets <strong>0.60× [0.47, 0.74]</strong>, <strong>0.69× [0.57, 0.82]</strong> and <strong>0.74× [0.63, 0.86]</strong> of a useful condition's attention at the same position.</p>
+  </div>
+  <div class="wide">
+    <figure>
+      <div class="plate"><img src="figures/4_position_vs_role.png" alt="Regression estimates for position and role effects on attention, three models; only the last row lies clearly left of 1x." loading="lazy" width="1488" height="737"></div>
+      <figcaption><b>Position and role separated.</b> Multiplicative effect on attention per token, estimate and 95% bootstrap CI.</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <h3>Layer by layer</h3>
+    <p>The layer profiles are reproducible: computed on two random halves of the problems, they correlate at r = 0.97–1.00 for every model and field. In Qwen3-4B and Phi-4-mini, layers 2–4 read the instruction at 4.3–8.3× its share. Attention to the equation peaks early (13–26% of the network's depth), and many upper layers read the answer-format instruction at about 2×.</p>
+  </div>
+  <div class="wide">
+    <figure>
+      <div class="plate"><img src="figures/5_layers_fields.png" alt="Three line charts, one per model, of attention density per layer for five fields of the problem." loading="lazy" width="2386" height="689"></div>
+      <figcaption><b>Attention density per layer and field</b> (median over problems). These curves are the reference for the representation analysis: probe and similarity curves will be read against them, layer by layer.</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <h3>Wrong answers come with a different reading of the problem (Phi-4-mini)</h3>
+    <p>Comparing problems answered wrongly with problems answered correctly, Phi-4-mini (39 wrong, 104 correct) gives the equation <strong>0.63× [0.53, 0.78]</strong> and the useful conditions <strong>0.76× [0.68, 0.89]</strong> of the attention, and the instruction 1.37× [1.20, 1.47]. Qwen2.5-Math (17 wrong) shows no difference; Qwen3-4B had too few wrong answers (3) to compare.</p>
+  </div>
+  <div class="wide">
+    <figure>
+      <div class="plate"><img src="figures/7_correct_vs_wrong.png" alt="Ratio of attention for wrong versus correct answers per field, for Qwen2.5-Math and Phi-4-mini." loading="lazy" width="1414" height="698"></div>
+      <figcaption><b>Wrong ÷ correct answers,</b> attention density per field (median ratio, 95% CI).</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="next">
+  <div class="wrap">
+    <h2><span class="num">5</span>What the models represent <span class="status">In progress</span></h2>
+    <p>The second step asks what the hidden states encode, using a new set of <strong>1,980 problems with 1,712 different equations</strong> — large enough that a probe cannot simply memorise the equations (the first set has only 40 different second-order left-hand sides). It adds harder problems: leading coefficients other than 1, rational roots, polynomial, exponential, trigonometric and resonant forcing.</p>
+    <p>Hidden states of every layer are extracted at the equation, the conditions, the last token before any working, and the model's own final answer. Planned analyses:</p>
+    <ul>
+      <li><strong>Root type</strong> (real distinct, repeated, complex) of second-order equations, and regression of the <strong>roots and the discriminant</strong>, layer by layer.</li>
+      <li><strong>Solution family</strong> (exponential, trigonometric, polynomial, …), split into problems where it is written in the equation and problems where it has to be derived.</li>
+      <li><strong>Is the answer known before the working?</strong> Decoding the solution's constants and roots from the state before the model writes anything, compared with the state at its final answer.</li>
+      <li><strong>Will the answer be correct?</strong> Predicted from the state before any working, within each equation type.</li>
+      <li>The <strong>best layer and the earliest near-best layer</strong> for each probe, compared with the attention curves above; RSA and CKA across layers and models.</li>
+    </ul>
+    <p>Controls: probes on the embedding layer and on bag-of-tokens features, control tasks with shuffled labels, and cross-validation folds grouped by equation and by characteristic polynomial.</p>
+  </div>
+</section>
+
+<section id="methods">
+  <div class="wrap">
+    <h2><span class="num">6</span>Methods in brief</h2>
+    <dl class="defs">
+      <dt>Models</dt>
+      <dd>Qwen3-4B-Instruct-2507, Qwen2.5-Math-1.5B-Instruct, Phi-4-mini-instruct; Hugging Face Transformers, fp16 on T4 GPUs (Qwen2.5-Math in fp32 for attention), greedy decoding, no fine-tuning.</dd>
+      <dt>Grading</dt>
+      <dd>Final answer extracted from the reply, parsed from plain text or LaTeX, compared with the true solution numerically at five points (relative tolerance 10⁻⁶) in SymPy.</dd>
+      <dt>Attention</dt>
+      <dd>Mean over heads; the answer-expression tokens are the queries; problem-text fields are mapped to tokens through the tokenizer's character offsets. Rollout is reported only for total flow, because it over-weights the first tokens.</dd>
+      <dt>Statistics</dt>
+      <dd>Per-problem log ratios summarised by their median with a 2,000-sample bootstrap 95% CI; position and role separated by a regression with problem fixed effects (1,000 bootstrap resamples of problems). Accuracy intervals are Wilson intervals.</dd>
+      <dt>Also computed, not used for conclusions</dt>
+      <dd>Gradient×Input and Integrated Gradients. A differential equation is extremely sensitive to any change of its input, so gradient- and perturbation-based attributions (and LIME, SHAP, occlusion) do not give meaningful scores here; Integrated Gradients additionally depended strongly on its baseline.</dd>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Thesis project on LLM interpretability, 2026. All numbers on this page come from the analysis code and its saved result files; intervals are 95%.
+  </div>
+</footer>
+
+</body>
+</html>
